@@ -7,3 +7,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --white: #fff;
+
+  --primary-70: #f0e6ff;
+  --primary-80: #c599ff;
+  --primary-90: #994dfa;
+  --primary-100: #6e0ad6;
+  --primary-110: #5c08b2;
+  --primary-120: #49078d;
+  --primary-130: #37056b;
+
+  --secondary-70: #e2f9d8;
+  --secondary-80: #c6f2b1;
+  --secondary-90: #a9ec8a;
+  --secondary-100: #8ce563;
+  --secondary-110: #69ac4a;
+  --secondary-120: #467332;
+  --secondary-130: #233919;
+
+  --neutral-70: #5e6a82;
+  --neutral-80: #3c4453;
+  --neutral-100: #1a1d23;
+
+  --danger-100: #e22828;
+}
