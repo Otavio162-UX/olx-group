@@ -1,3 +1,5 @@
+'use client'
+
 import { forwardRef, Ref } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { titleVariants, TTitle } from '.'

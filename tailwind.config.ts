@@ -19,7 +19,11 @@ export default {
         container1328: '1328px',
       },
       colors: {
-        white: 'var(--white)',
+        'header-desktop-background': 'var(--header-desktop-background)',
+        'header-mobile-background': 'var(--header-mobile-background)',
+        'header-desktop-icons': 'var(--header-desktop-icons)',
+        'header-mobile-icons': 'var(--header-mobile-icons)',
+        'button-menu': 'var(--button-menu)',
         primary: {
           70: 'var(--primary-70)',
           80: 'var(--primary-80)',
@@ -41,11 +45,15 @@ export default {
         neutral: {
           70: 'var(--neutral-70)',
           80: 'var(--neutral-80)',
-          100: 'var(--neutral-100)',
+          90: 'var(--neutral-90)',
+          130: 'var(--neutral-130)',
         },
         danger: {
           100: 'var(--danger-100)',
         },
+      },
+      minWidth: {
+        minContainer: '24.375rem',
       },
     },
   },

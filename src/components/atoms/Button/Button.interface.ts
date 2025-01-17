@@ -8,6 +8,7 @@ export type TButtonVariants =
   | 'link'
   | 'neutral'
   | 'danger'
+  | 'clean'
 
 export interface IButton extends Omit<ComponentProps<'button'>, 'children'> {
   variant?: TButtonVariants
