@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
     ],
     formats: ['image/webp'],
   },
+  reactStrictMode: false,
   /* config options here */
 }
 

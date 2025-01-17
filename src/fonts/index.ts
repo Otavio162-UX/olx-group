@@ -5,18 +5,28 @@ import localFont from 'next/font/local'
 const ZonaPro = localFont({
   src: [
     {
-      path: './zonaPro/zonaPro-Bold.otf',
+      path: './zonaPro/zonaPro-Bold.ttf',
       style: 'Bold',
       weight: '700',
     },
     {
-      path: './zonaPro/zonaPro-Thin.otf',
+      path: './zonaPro/zonaPro-Regular.ttf',
+      style: 'Regular',
+      weight: '400',
+    },
+    {
+      path: './zonaPro/zonaPro-Light.ttf',
+      style: 'Light',
+      weight: '300',
+    },
+    {
+      path: './zonaPro/zonaPro-Thin.ttf',
       style: 'Thin',
       weight: '200',
     },
   ],
   variable: '--font-ZonaPro',
-  weight: '200 700',
+  weight: '200 300 400 700',
 })
 
 export const Roboto = roboto({
@@ -35,5 +45,5 @@ export const allFonts = twMerge(
   ZonaPro.variable,
   Roboto.className,
   Roboto.variable,
-  Inter.className
+  Inter.variable
 )

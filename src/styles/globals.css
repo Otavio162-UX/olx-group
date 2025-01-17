@@ -9,7 +9,11 @@
 }
 
 :root {
-  --white: #fff;
+  --header-desktop-background: #ffffff;
+  --header-mobile-background: #ffffff;
+  --header-desktop-icons: #6e0ad6;
+  --header-mobile-icons: #6e0ad6;
+  --button-menu: #1a1d23;
 
   --primary-70: #f0e6ff;
   --primary-80: #c599ff;
@@ -27,9 +31,10 @@
   --secondary-120: #467332;
   --secondary-130: #233919;
 
-  --neutral-70: #5e6a82;
-  --neutral-80: #3c4453;
-  --neutral-100: #1a1d23;
+  --neutral-70: #ffffff;
+  --neutral-80: #5e6a82;
+  --neutral-90: #3c4453;
+  --neutral-130: #1a1d23;
 
   --danger-100: #e22828;
 }

@@ -1,6 +1,8 @@
+'use client'
+
+import { forwardRef, Ref } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { IText, textVariants } from '.'
-import { forwardRef, Ref } from 'react'
 
 const Text = forwardRef(
   (

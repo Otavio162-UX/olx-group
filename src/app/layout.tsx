@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
 import { twMerge } from 'tailwind-merge'
 
+import { Header } from '@/components/templates/Header'
 import { allFonts } from '@/fonts'
 
 import '@/styles/globals.css'
-import { Header } from '@/components/templates/Header'
 
 export const metadata: Metadata = {
   title: 'Grupo OLX',
@@ -21,7 +21,7 @@ export default async function LocaleLayout({ children }: TRootLayoutParams) {
       <body
         className={twMerge(
           allFonts,
-          'flex flex-col min-h-screen antialiased w-full max-w-[100vw] min-w-[17.5rem]'
+          'flex flex-col min-h-screen antialiased w-full max-w-[100vw] min-w-minContainer'
         )}
       >
         <Header />
