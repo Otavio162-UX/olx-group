@@ -125,6 +125,8 @@ A organização segue o padrão abaixo:
     export const minhaVariavel =
       'Vou ser reutilizada no fluxo desse componente e necessito ser reaproveitada.'
     ```
+  - **`[component-pasta]/meuComponent.interface.ts`**
+  - Arquivo que geralmente contém as principais tipagens daquele componente específico.
 
 ### **`src/enum`**
 
