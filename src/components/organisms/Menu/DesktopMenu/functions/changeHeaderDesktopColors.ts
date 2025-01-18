@@ -27,6 +27,6 @@ export const changeHeaderDesktopColors = ({
   ]
 
   headerChangeColors.forEach(({ variable, color }) => {
-    document?.documentElement?.style.setProperty(variable, color)
+    document.documentElement.style.setProperty(variable, color)
   })
 }

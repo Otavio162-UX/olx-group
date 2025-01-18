@@ -24,6 +24,6 @@ export const changeHeaderMobileColors = ({
   ]
 
   headerChangeColors.forEach(({ variable, color }) => {
-    document?.documentElement?.style.setProperty(variable, color)
+    document.documentElement.style.setProperty(variable, color)
   })
 }

@@ -1,21 +1,8 @@
 import { Title } from '@/components/atoms/Title'
 import { WrapperDropDown } from '@/components/molecules/DropDown/WrapperDropDown'
 import { twMerge } from 'tailwind-merge'
-import {
-  IDropDownDefault,
-  TDropDownDefaultProps,
-} from './DropDownDefault.interface'
-
-const submenuDefault: TDropDownDefaultProps = {
-  whoWeAre: {
-    title: 'Quem somos',
-    submenu: ['Quem somos', 'Nossa história', 'Números', 'Causas que apoiamos'],
-  },
-  ourPortals: {
-    title: 'Nossos portais',
-    submenu: ['OLX', 'ZAP', 'Viva Real'],
-  },
-}
+import { IDropDownDefault } from './DropDownDefault.interface'
+import { submenuDefault } from './variables/submenuDefault'
 
 const DropDownDefault = ({
   dropDownDefault,
