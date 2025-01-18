@@ -1,6 +1,8 @@
+'use client'
+
 import { useClickOutside } from '@/hooks/useClickOutside'
 import { MutableRefObject, useState } from 'react'
-import { changeHeaderMobileColors } from '..'
+import { changeHeaderMobileColors } from '../functions/changeHeaderMobileColors'
 
 interface IReturnUseInitMobileMenu {
   openMobileMenu: boolean

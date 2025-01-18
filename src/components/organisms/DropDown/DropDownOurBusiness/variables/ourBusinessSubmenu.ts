@@ -1,4 +1,4 @@
-import { InternalRoutes } from '@/routes'
+import { InternalRoutes } from '@/routes/routes'
 
 export type TSubmenuOurBusiness =
   | {

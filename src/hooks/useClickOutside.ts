@@ -6,7 +6,7 @@ interface IUseClickOutside {
   onClickOutside: VoidFunction
 }
 
-export const useClickOutside = ({ onClickOutside }: IUseClickOutside) => {
+const useClickOutside = ({ onClickOutside }: IUseClickOutside) => {
   const ref = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
@@ -25,3 +25,5 @@ export const useClickOutside = ({ onClickOutside }: IUseClickOutside) => {
 
   return ref
 }
+
+export { useClickOutside }

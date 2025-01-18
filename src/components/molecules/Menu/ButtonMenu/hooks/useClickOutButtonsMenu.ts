@@ -28,8 +28,9 @@ export const useClickOutButtonsMenu = ({
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const targetElement = event.target as HTMLElement
+      const isDesktop = window.innerWidth >= 1024
 
-      if (ref.current && !ref.current.contains(targetElement)) {
+      if (ref.current && !ref.current.contains(targetElement) && isDesktop) {
         const otherMenuClicked = targetElement.closest(`#${targetId}`) !== null
 
         if (!otherMenuClicked && changeHeaderColors)

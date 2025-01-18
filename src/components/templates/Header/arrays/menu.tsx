@@ -1,10 +1,10 @@
-import { IButtonMenu } from '@/components/molecules/Menu/ButtonMenu'
+import { IButtonMenu } from '@/components/molecules/Menu/ButtonMenu/ButtonMenu.interface'
 import { DropDownDefault } from '@/components/organisms/DropDown/DropDownDefault'
 import { DropDownFollowUs } from '@/components/organisms/DropDown/DropDownFollowUs'
 import { DropDownOurBusiness } from '@/components/organisms/DropDown/DropDownOurBusiness'
-import { InternalRoutes } from '@/routes'
+import { InternalRoutes } from '@/routes/routes'
 
-type TMenu = Omit<IButtonMenu, 'changeHeaderColors'>
+type TMenu = Pick<IButtonMenu, 'link' | 'buttonTitle' | 'children'>
 
 const whoWeAre: TMenu = {
   buttonTitle: 'Quem somos',
@@ -40,3 +40,7 @@ export const menu: TMenu[] = [
   },
   followUs,
 ]
+
+export const leftMenu = menu.slice(0, 3)
+
+export const rightMenu = menu.slice(3)

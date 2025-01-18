@@ -1,5 +1,4 @@
-import { IconType } from 'react-icons'
-import { IUseClickOutside } from '.'
+import { IUseClickOutside } from './hooks/useClickOutButtonsMenu'
 
 export interface IButtonMenu
   extends Pick<IUseClickOutside, 'changeHeaderColors'> {
@@ -10,6 +9,6 @@ export interface IButtonMenu
   link?: string
   buttonTitle: string
   children?: JSX.Element
-  Icon?: IconType
+  iconPath?: string
   menuOpenRedirect?: boolean
 }

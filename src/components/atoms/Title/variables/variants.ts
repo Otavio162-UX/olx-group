@@ -1,5 +1,5 @@
 import { TObjectVariant } from '@/types/global'
-import { TTitleTag } from '..'
+import { TTitleTag } from '../Title.interface'
 
 export const titleVariants: TObjectVariant<TTitleTag> = {
   h1: 'text-[4rem]',
