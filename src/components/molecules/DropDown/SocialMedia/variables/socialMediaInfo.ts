@@ -1,52 +1,41 @@
-import { ExternalRoutes } from '@/routes'
-import { IconType } from 'react-icons'
-import { FiInstagram } from 'react-icons/fi'
-import { PiYoutubeLogo } from 'react-icons/pi'
-import { RiFacebookCircleFill, RiTwitterXFill } from 'react-icons/ri'
-import { SlSocialLinkedin } from 'react-icons/sl'
-import { TSocialMedia } from '..'
-
-interface ISocialMediaRenderInfo {
-  Logo: IconType
-  logoClassName: string
-  text: string
-  link: string
-}
-
-type TSocialMediaInfo = {
-  [key in TSocialMedia]: ISocialMediaRenderInfo
-}
-
-const logoDefaultClassName = 'text-primary-100 text-2xl'
+import { ExternalRoutes } from '@/routes/routes'
+import {
+  mdiFacebook,
+  mdiInstagram,
+  mdiLinkedin,
+  mdiTwitter,
+  mdiYoutube,
+} from '@mdi/js'
+import { TSocialMediaInfo } from '../SocialMedia.interface'
 
 export const socialMediaInfo: TSocialMediaInfo = {
   twitter: {
-    Logo: RiTwitterXFill,
-    logoClassName: logoDefaultClassName,
+    iconPath: mdiTwitter,
+    iconClassName: 'text-primary-100 text-2xl',
     text: 'Twitter',
     link: ExternalRoutes.TWITTER,
   },
   linkedin: {
-    Logo: SlSocialLinkedin,
-    logoClassName: logoDefaultClassName,
+    iconPath: mdiLinkedin,
+    iconClassName: 'text-primary-100 text-2xl',
     text: 'LinkedIn',
     link: ExternalRoutes.LINKEDIN,
   },
   instagram: {
-    Logo: FiInstagram,
-    logoClassName: logoDefaultClassName,
+    iconPath: mdiInstagram,
+    iconClassName: 'text-primary-100 text-2xl',
     text: 'Instagram',
     link: ExternalRoutes.INSTAGRAM,
   },
   facebook: {
-    Logo: RiFacebookCircleFill,
-    logoClassName: 'text-transparent text-2xl stroke-1 stroke-primary-100',
+    iconPath: mdiFacebook,
+    iconClassName: 'text-transparent text-2xl stroke-1 stroke-primary-100',
     text: 'Facebook',
     link: ExternalRoutes.FACEBOOK,
   },
   youtube: {
-    Logo: PiYoutubeLogo,
-    logoClassName: logoDefaultClassName,
+    iconPath: mdiYoutube,
+    iconClassName: 'text-primary-100 text-2xl',
     text: 'YouTube',
     link: ExternalRoutes.YOUTUBE,
   },

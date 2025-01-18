@@ -15,7 +15,7 @@ export type TRootLayoutParams = Readonly<{
   children: React.ReactNode
 }>
 
-export default async function LocaleLayout({ children }: TRootLayoutParams) {
+export default function LocaleLayout({ children }: TRootLayoutParams) {
   return (
     <html lang={'pt-BR'}>
       <body

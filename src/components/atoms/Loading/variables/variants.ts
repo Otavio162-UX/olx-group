@@ -1,5 +1,5 @@
 import { TObjectVariant } from '@/types/global'
-import { TLoadingSizesVariants, TLoadingVariants } from '..'
+import { TLoadingSizesVariants, TLoadingVariants } from '../Loading.interface'
 
 export const loadingVariants: TObjectVariant<TLoadingVariants> = {
   spinner: 'spinner',

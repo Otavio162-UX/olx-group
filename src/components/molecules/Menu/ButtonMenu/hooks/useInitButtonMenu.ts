@@ -2,7 +2,10 @@
 
 import { useRouter } from 'next/navigation'
 import { MutableRefObject, useState } from 'react'
-import { IUseClickOutside, useClickOutButtonsMenu } from '.'
+import {
+  IUseClickOutside,
+  useClickOutButtonsMenu,
+} from './useClickOutButtonsMenu'
 
 interface IUseInitButtonMenu
   extends Pick<IUseClickOutside, 'changeHeaderColors'> {

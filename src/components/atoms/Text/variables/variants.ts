@@ -1,5 +1,5 @@
 import { TObjectVariant } from '@/types/global'
-import { TTextVariants } from '..'
+import { TTextVariants } from '../Text.interface'
 
 export const textVariants: TObjectVariant<TTextVariants> = {
   'very-small': 'text-[.625rem]',

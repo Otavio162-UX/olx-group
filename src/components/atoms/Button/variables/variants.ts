@@ -1,5 +1,5 @@
 import { TGlobalSizeVariant, TObjectVariant } from '@/types/global'
-import { TButtonVariants } from '..'
+import { TButtonVariants } from '../Button.interface'
 
 export const buttonVariants: TObjectVariant<TButtonVariants> = {
   primary:
