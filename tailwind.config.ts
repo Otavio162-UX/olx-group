@@ -16,7 +16,8 @@ export default {
         Inter: 'var(--font-Inter)',
       },
       maxWidth: {
-        container1328: '1328px',
+        container1328: '83rem',
+        container1056: '66rem',
       },
       colors: {
         'header-desktop-background': 'var(--header-desktop-background)',
@@ -46,6 +47,7 @@ export default {
           70: 'var(--neutral-70)',
           80: 'var(--neutral-80)',
           90: 'var(--neutral-90)',
+          100: 'var(--neutral-100)',
           130: 'var(--neutral-130)',
         },
         danger: {

@@ -1,8 +1,8 @@
 'use client'
 
 import { Title } from '@/components/atoms/Title'
-import { SocialMedia } from '@/components/molecules/DropDown/SocialMedia'
-import { TSocialMedia } from '@/components/molecules/DropDown/SocialMedia/SocialMedia.interface'
+import { DropDownSocialMedia } from '@/components/molecules/DropDown/DropDownSocialMedia'
+import { TSocialMedia } from '@/components/molecules/DropDown/DropDownSocialMedia/DropDownSocialMedia.interface'
 import { WrapperDropDown } from '@/components/molecules/DropDown/WrapperDropDown'
 import { twMerge } from 'tailwind-merge'
 import { followUsSubmenu } from './variables/followUsSubmenu'
@@ -24,7 +24,7 @@ const DropDownFollowUs = (): JSX.Element => {
           >
             {submenu.map((item, indexItem) =>
               item.socialMedia ? (
-                <SocialMedia
+                <DropDownSocialMedia
                   key={`social-media-${indexItem}`}
                   socialMedia={item.socialMedia as TSocialMedia}
                 />

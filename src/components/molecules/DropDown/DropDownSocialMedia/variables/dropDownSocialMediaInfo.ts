@@ -6,9 +6,9 @@ import {
   mdiTwitter,
   mdiYoutube,
 } from '@mdi/js'
-import { TSocialMediaInfo } from '../SocialMedia.interface'
+import { TSocialMediaInfo } from '../DropDownSocialMedia.interface'
 
-export const socialMediaInfo: TSocialMediaInfo = {
+export const dropDownSocialMediaInfo: TSocialMediaInfo = {
   twitter: {
     iconPath: mdiTwitter,
     iconClassName: 'text-primary-100 text-2xl',

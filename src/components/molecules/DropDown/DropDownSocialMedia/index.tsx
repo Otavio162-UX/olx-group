@@ -4,14 +4,15 @@ import Link from 'next/link'
 
 import Icon from '@mdi/react'
 import { twMerge } from 'tailwind-merge'
-import { ISocialMedia } from './SocialMedia.interface'
-import { socialMediaInfo } from './variables/socialMediaInfo'
+import { ISocialMedia } from './DropDownSocialMedia.interface'
+import { dropDownSocialMediaInfo } from './variables/dropDownSocialMediaInfo'
 
-const SocialMedia = ({
+const DropDownSocialMedia = ({
   wrapperElementClassName,
   socialMedia,
 }: ISocialMedia): JSX.Element => {
-  const { iconPath, iconClassName, text, link } = socialMediaInfo[socialMedia]
+  const { iconPath, iconClassName, text, link } =
+    dropDownSocialMediaInfo[socialMedia]
 
   return (
     <Link href={link} target="_blank">
@@ -30,4 +31,4 @@ const SocialMedia = ({
   )
 }
 
-export { SocialMedia }
+export { DropDownSocialMedia }

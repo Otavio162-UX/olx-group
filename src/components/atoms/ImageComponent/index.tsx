@@ -4,14 +4,16 @@ import { IImageComponent } from './ImageComponent.interface'
 const ImageComponent = ({
   src,
   alt,
+  width,
+  height,
   className,
 }: IImageComponent): JSX.Element => {
   return (
     <Image
       src={src}
       alt={alt}
-      width={40}
-      height={40}
+      width={width}
+      height={height}
       priority
       className={className}
     />
