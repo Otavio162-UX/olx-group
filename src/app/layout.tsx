@@ -4,6 +4,7 @@ import { twMerge } from 'tailwind-merge'
 import { Header } from '@/components/templates/Header'
 import { allFonts } from '@/fonts'
 
+import { Footer } from '@/components/templates/Footer'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function LocaleLayout({ children }: TRootLayoutParams) {
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

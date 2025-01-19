@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
     formats: ['image/webp'],
   },
   reactStrictMode: false,
-  transpilePackages: ['@mdi/js', '@mdi/react'],
+  transpilePackages: ['@mdi/js', '@mdi/react', 'mdi.js'],
   /* config options here */
 }
 

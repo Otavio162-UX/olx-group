@@ -15,4 +15,5 @@ export const ExternalRoutes = {
   INSTAGRAM: 'https://twitter.com/datazap',
   FACEBOOK: 'https://twitter.com/datazap',
   YOUTUBE: 'https://twitter.com/datazap',
+  TIKTOK: 'https://twitter.com/datazap',
 }
