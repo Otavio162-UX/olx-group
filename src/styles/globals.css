@@ -38,7 +38,14 @@
   --neutral-120: #1d1d1d;
   --neutral-130: #1a1d23;
 
+  --success-border-color: #24a148;
+
+  --placeholder: #8994a9;
+
   --orange-100: #ff5e00;
 
   --danger-100: #e22828;
+
+  --error-background-color: #fff5f5;
+  --error-border-color: #e22828;
 }

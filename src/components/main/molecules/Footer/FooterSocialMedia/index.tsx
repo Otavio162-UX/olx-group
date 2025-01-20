@@ -1,4 +1,4 @@
-import { ImageComponent } from '@/components/main/atoms/ImageComponent'
+import { ImageComponent } from '@/components/generic/atoms/ImageComponent'
 import Icon from '@mdi/react'
 import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'

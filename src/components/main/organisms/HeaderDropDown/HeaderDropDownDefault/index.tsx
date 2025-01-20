@@ -1,4 +1,4 @@
-import { Title } from '@/components/main/atoms/Title'
+import { Title } from '@/components/generic/atoms/Title'
 import { HeaderDropDownWrapper } from '@/components/main/molecules/HeaderDropDown/HeaderDropDownWrapper'
 import { twMerge } from 'tailwind-merge'
 import { IHeaderDropDownDefault } from './HeaderDropDownDefault.interface'

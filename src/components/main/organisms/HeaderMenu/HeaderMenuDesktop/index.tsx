@@ -1,6 +1,6 @@
 'use client'
 
-import { ButtonCollapsible } from '@/components/main/molecules/ButtonCollapsible'
+import { ButtonCollapsible } from '@/components/generic/molecules/ButtonCollapsible'
 import { IDesktopMenu } from './HeaderMenuDesktop.interface'
 import { changeHeaderDesktopColors } from './functions/changeHeaderDesktopColors'
 

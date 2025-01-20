@@ -1,6 +1,6 @@
 'use client'
 
-import { ImageComponent } from '@/components/main/atoms/ImageComponent'
+import { ImageComponent } from '@/components/generic/atoms/ImageComponent'
 import { TabinationButton } from '@/components/main/atoms/Tabination/TabinationButton'
 import { TabinationWrapperButtons } from '@/components/main/molecules/Tabination/TabinationWrapperButtons'
 import { useState } from 'react'
@@ -40,7 +40,7 @@ const Tabination = ({ children, buttonsTab }: ITabination): JSX.Element => {
         className={twMerge('py-6 flex flex-col gap-6', 'lg:flex-row lg:gap-12')}
       >
         <ImageComponent
-          src="/logos/olxGroup.svg"
+          src="/main/logos/olxGroup.svg"
           alt="olx-group-logo-image"
           width={153}
           height={32}

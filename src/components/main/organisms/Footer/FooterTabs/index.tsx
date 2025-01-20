@@ -1,5 +1,5 @@
-import { Title } from '@/components/main/atoms/Title'
-import { ButtonCollapsible } from '@/components/main/molecules/ButtonCollapsible'
+import { Title } from '@/components/generic/atoms/Title'
+import { ButtonCollapsible } from '@/components/generic/molecules/ButtonCollapsible'
 import { Fragment } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { FooterLinkTab } from '../FooterLinkTab'

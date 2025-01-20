@@ -1,6 +1,6 @@
 'use client'
 
-import { Title } from '@/components/main/atoms/Title'
+import { Title } from '@/components/generic/atoms/Title'
 import { HeaderDropDownSocialMedia } from '@/components/main/molecules/HeaderDropDown/HeaderDropDownSocialMedia'
 import { THeaderDropDownSocialMedia } from '@/components/main/molecules/HeaderDropDown/HeaderDropDownSocialMedia/HeaderDropDownSocialMedia.interface'
 import { HeaderDropDownWrapper } from '@/components/main/molecules/HeaderDropDown/HeaderDropDownWrapper'

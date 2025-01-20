@@ -1,4 +1,4 @@
-import { ButtonCollapsible } from '@/components/main/molecules/ButtonCollapsible'
+import { ButtonCollapsible } from '@/components/generic/molecules/ButtonCollapsible'
 import { headerMenu } from '@/components/main/templates/Header/arrays/headerMenu'
 
 const HeaderDropDownMobile = (): JSX.Element => {

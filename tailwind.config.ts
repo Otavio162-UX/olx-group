@@ -43,6 +43,7 @@ export default {
           120: 'var(--secondary-120)',
           130: 'var(--secondary-130)',
         },
+        placeholder: 'var(--placeholder)',
         orange: {
           100: 'var(--orange-100)',
         },
@@ -54,9 +55,12 @@ export default {
           120: 'var(--neutral-120)',
           130: 'var(--neutral-130)',
         },
+        'success-border-color': 'var(--success-border-color)',
         danger: {
           100: 'var(--danger-100)',
         },
+        'error-background-color': 'var(--error-background-color)',
+        'error-border-color': 'var(--error-border-color)',
       },
       minWidth: {
         minContainer: '24.375rem',

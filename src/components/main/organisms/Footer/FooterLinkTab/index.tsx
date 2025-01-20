@@ -1,4 +1,4 @@
-import { Text } from '@/components/main/atoms/Text'
+import { Text } from '@/components/generic/atoms/Text'
 import { mdiChevronRight } from '@mdi/js'
 import Icon from '@mdi/react'
 import Link from 'next/link'

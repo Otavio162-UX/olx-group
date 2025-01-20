@@ -1,4 +1,4 @@
-import { Button } from '@/components/main/atoms/Button'
+import { Button } from '@/components/generic/atoms/Button'
 import { twMerge } from 'tailwind-merge'
 import { ITabinationButton } from './TabinationButton.interface'
 import { tabinationButtonProps } from './variables/tabinationButtonProps'

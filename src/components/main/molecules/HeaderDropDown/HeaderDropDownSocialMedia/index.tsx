@@ -1,4 +1,4 @@
-import { Title } from '@/components/main/atoms/Title'
+import { Title } from '@/components/generic/atoms/Title'
 
 import Link from 'next/link'
 

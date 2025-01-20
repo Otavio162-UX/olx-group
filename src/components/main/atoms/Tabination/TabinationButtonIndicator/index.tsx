@@ -1,4 +1,4 @@
-import { Button } from '@/components/main/atoms/Button'
+import { Button } from '@/components/generic/atoms/Button'
 import Icon from '@mdi/react'
 import { twMerge } from 'tailwind-merge'
 import { IButtonScrollIndicator } from './ButtonScrollIndicator.interface'

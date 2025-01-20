@@ -1,6 +1,6 @@
 'use client'
 
-import { ButtonCollapsible } from '@/components/main/molecules/ButtonCollapsible'
+import { ButtonCollapsible } from '@/components/generic/molecules/ButtonCollapsible'
 import { HeaderDropDownSubmenuOurBusiness } from '@/components/main/molecules/HeaderDropDown/HeaderDropDownSubmenuOurBusiness'
 import { HeaderDropDownWrapper } from '@/components/main/molecules/HeaderDropDown/HeaderDropDownWrapper'
 import { twMerge } from 'tailwind-merge'

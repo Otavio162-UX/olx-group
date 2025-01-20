@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@/components/main/atoms/Button'
+import { Button } from '@/components/generic/atoms/Button'
 import { mdiChevronDown } from '@mdi/js'
 import Icon from '@mdi/react'
 import { twMerge } from 'tailwind-merge'

@@ -1,10 +1,10 @@
-import { Header } from '@/components/blog/templates/Header'
+import { HeaderBlog } from '@/components/blog/templates/HeaderBlog'
 import { TRootLayoutParams } from '@/types/global'
 
 const LayoutBlog = ({ children }: TRootLayoutParams): JSX.Element => {
   return (
     <>
-      <Header />
+      <HeaderBlog />
       {children}
     </>
   )

@@ -1,4 +1,4 @@
-import { IButtonCollapsibleProps } from '@/components/main/molecules/ButtonCollapsible/ButtonCollapsible.interface'
+import { IButtonCollapsibleProps } from '@/components/generic/molecules/ButtonCollapsible/ButtonCollapsible.interface'
 import { InternalRoutes } from '@/routes/routes'
 import { mdiChevronRight } from '@mdi/js'
 

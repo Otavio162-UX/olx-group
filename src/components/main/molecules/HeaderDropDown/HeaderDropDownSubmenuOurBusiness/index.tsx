@@ -1,6 +1,6 @@
 'use client'
 
-import { Title } from '@/components/main/atoms/Title'
+import { Title } from '@/components/generic/atoms/Title'
 import { mdiChevronRight } from '@mdi/js'
 import Icon from '@mdi/react'
 import Link from 'next/link'

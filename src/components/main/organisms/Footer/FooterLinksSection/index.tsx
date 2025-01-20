@@ -1,5 +1,5 @@
-import { Button } from '@/components/main/atoms/Button'
-import { Text } from '@/components/main/atoms/Text'
+import { Button } from '@/components/generic/atoms/Button'
+import { Text } from '@/components/generic/atoms/Text'
 import { FooterSocialMedia } from '@/components/main/molecules/Footer/FooterSocialMedia'
 import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'

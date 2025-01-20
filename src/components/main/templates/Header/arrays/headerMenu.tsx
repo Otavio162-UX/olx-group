@@ -1,13 +1,8 @@
-import { IButtonCollapsible } from '@/components/main/molecules/ButtonCollapsible/ButtonCollapsible.interface'
 import { HeaderDropDownDefault } from '@/components/main/organisms/HeaderDropDown/HeaderDropDownDefault'
 import { HeaderDropDownFollowUs } from '@/components/main/organisms/HeaderDropDown/HeaderDropDownFollowUs'
 import { HeaderDropDownOurBusiness } from '@/components/main/organisms/HeaderDropDown/HeaderDropDownOurBusiness'
 import { InternalRoutes } from '@/routes/routes'
-
-type THeaderMenu = Pick<
-  IButtonCollapsible,
-  'link' | 'buttonTitle' | 'children' | 'iconProps'
->
+import { THeaderMenu } from '@/types/global'
 
 const whoWeAre: THeaderMenu = {
   buttonTitle: 'Quem somos',

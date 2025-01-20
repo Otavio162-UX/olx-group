@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@/components/main/atoms/Button'
+import { Button } from '@/components/generic/atoms/Button'
 import { HeaderDropDownMobile } from '@/components/main/organisms/HeaderDropDown/HeaderDropDownMobile'
 import { mdiMenu } from '@mdi/js'
 import Icon from '@mdi/react'

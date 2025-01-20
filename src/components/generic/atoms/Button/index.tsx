@@ -1,4 +1,4 @@
-import { Loading } from '@/components/main/atoms/Loading'
+import { Loading } from '@/components/generic/atoms/Loading'
 import { twMerge } from 'tailwind-merge'
 import { IButton } from './Button.interface'
 import { buttonProps } from './variables/buttonProps'
