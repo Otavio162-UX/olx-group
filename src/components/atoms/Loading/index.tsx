@@ -1,21 +1,12 @@
 import { twMerge } from 'tailwind-merge'
 
 import { ILoading } from './Loading.interface'
-import { loadingVariantComponents, loadingVariants } from './variables/variants'
+import { loadingProps } from './variables/loadingProps'
 
-const Loading = ({
-  variant = 'spinner',
-  component = 'buttonLoading',
-  size = 'medium',
-}: ILoading): JSX.Element => {
-  return (
-    <div
-      className={twMerge(
-        loadingVariants[variant],
-        loadingVariantComponents[component][size]
-      )}
-    />
-  )
+const Loading = ({ size = 'medium' }: ILoading): JSX.Element => {
+  const { sizeVariants } = loadingProps
+
+  return <span className={twMerge('spinner', sizeVariants[size])} />
 }
 
 export { Loading }

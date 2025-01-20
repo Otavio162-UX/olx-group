@@ -32,7 +32,7 @@ const FooterLinksSection = (): JSX.Element => {
           ))}
         </div>
 
-        <Text className="text-xs text-neutral-130 font-ZonaPro">
+        <Text tag="p" className="text-xs text-neutral-130 font-ZonaPro">
           © Bom Negócio Atividades de Internet Ltda. - Rua do Catete, 359,
           Flamengo - 22220-001 - Rio de Janeiro, RJ
         </Text>

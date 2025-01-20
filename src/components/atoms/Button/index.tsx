@@ -1,8 +1,7 @@
 import { Loading } from '@/components/atoms/Loading'
 import { twMerge } from 'tailwind-merge'
 import { IButton } from './Button.interface'
-import { disabledClassName, loadingClassName } from './variables/classNames'
-import { buttonSizes, buttonVariants } from './variables/variants'
+import { buttonProps } from './variables/buttonProps'
 
 const Button = ({
   variant = 'primary',
@@ -14,6 +13,13 @@ const Button = ({
   loading,
   ...props
 }: IButton): JSX.Element => {
+  const {
+    classNameVariants,
+    disabledClassName,
+    loadingClassName,
+    sizesVariants,
+  } = buttonProps
+
   const isDisabled = disabled || loading
 
   return (
@@ -23,14 +29,14 @@ const Button = ({
         'font-semibold',
         disabled && !loading && disabledClassName,
         loading && loadingClassName,
-        buttonSizes[size],
-        buttonVariants[variant],
+        sizesVariants[size],
+        classNameVariants[variant],
         className
       )}
       disabled={isDisabled}
       {...props}
     >
-      {loading ? <Loading component="buttonLoading" size={size} /> : children}
+      {loading ? <Loading size={size} /> : children}
     </button>
   )
 }

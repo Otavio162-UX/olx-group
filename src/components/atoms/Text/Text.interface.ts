@@ -1,15 +1,8 @@
 import { ComponentProps, ReactNode } from 'react'
 
-export type TTextVariants =
-  | 'very-small'
-  | 'small'
-  | 'medium'
-  | 'large'
-  | 'very-large'
-  | 'big'
-  | 'very-big'
+export type TTextTag = 'p' | 'span' | 'strong' | 'small'
 
-export interface IText extends Omit<ComponentProps<'p'>, 'children'> {
-  variant?: TTextVariants
+export type TText = {
+  tag: TTextTag
   children: ReactNode
-}
+} & Omit<ComponentProps<'p'>, 'children'>

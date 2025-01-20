@@ -1,7 +1,7 @@
-import { INavigationTab } from '@/components/organisms/Footer/Tabs/Tabs.interface'
+import { INavigationFooterTab } from '@/components/organisms/Footer/FooterTabs/FooterTabs.interface'
 import { InternalRoutes } from '@/routes/routes'
 
-const whoWeAre: INavigationTab = {
+const whoWeAre: INavigationFooterTab = {
   title: 'Quem Somos',
   navigation: [
     {
@@ -31,7 +31,7 @@ const whoWeAre: INavigationTab = {
   ],
 }
 
-const ourPortals: INavigationTab = {
+const ourPortals: INavigationFooterTab = {
   title: 'Nossos portais',
   navigation: [
     {
@@ -49,7 +49,7 @@ const ourPortals: INavigationTab = {
   ],
 }
 
-export const immobileTabs: INavigationTab[] = [
+export const immobileTabs: INavigationFooterTab[] = [
   whoWeAre,
   ourPortals,
   {
@@ -85,7 +85,7 @@ export const immobileTabs: INavigationTab[] = [
   },
 ]
 
-export const autosTabs: INavigationTab[] = [
+export const autosTabs: INavigationFooterTab[] = [
   whoWeAre,
   ourPortals,
   {
@@ -117,7 +117,7 @@ export const autosTabs: INavigationTab[] = [
   },
 ]
 
-export const consumerGoodsTabs: INavigationTab[] = [
+export const consumerGoodsTabs: INavigationFooterTab[] = [
   whoWeAre,
   ourPortals,
   {
@@ -131,7 +131,7 @@ export const consumerGoodsTabs: INavigationTab[] = [
   },
 ]
 
-export const eventsTabs: INavigationTab[] = [
+export const eventsTabs: INavigationFooterTab[] = [
   whoWeAre,
   ourPortals,
   {
@@ -153,7 +153,7 @@ export const eventsTabs: INavigationTab[] = [
   },
 ]
 
-export const advertisingTabs: INavigationTab[] = [whoWeAre, ourPortals]
+export const advertisingTabs: INavigationFooterTab[] = [whoWeAre, ourPortals]
 
 export const footerTabs = [
   immobileTabs,

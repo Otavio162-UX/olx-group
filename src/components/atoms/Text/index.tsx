@@ -1,20 +1,16 @@
 import { twMerge } from 'tailwind-merge'
-import { IText } from './Text.interface'
-import { textVariants } from './variables/variants'
+import { TText } from './Text.interface'
 
 const Text = ({
-  variant = 'large',
+  tag: Tag = 'p',
   className,
   children,
   ...props
-}: IText): JSX.Element => {
+}: TText): JSX.Element => {
   return (
-    <p
-      className={twMerge('font-normal ', textVariants[variant], className)}
-      {...props}
-    >
+    <Tag className={twMerge('font-normal ', className)} {...props}>
       {children}
-    </p>
+    </Tag>
   )
 }
 

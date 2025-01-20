@@ -1,8 +1,8 @@
-import { Logo } from '@/components/atoms/Header/Logo'
-import { DesktopMenu } from '@/components/organisms/Menu/DesktopMenu'
-import { MobileMenu } from '@/components/organisms/Menu/MobileMenu'
+import { HeaderLogo } from '@/components/atoms/Header/HeaderLogo'
+import { HeaderMenuDesktop } from '@/components/organisms/HeaderMenu/HeaderMenuDesktop'
+import { HeaderMenuMobile } from '@/components/organisms/HeaderMenu/HeaderMenuMobile'
 import { twMerge } from 'tailwind-merge'
-import { leftMenu, rightMenu } from './arrays/menu'
+import { headerLeftMenu, headerRightMenu } from './arrays/headerMenu'
 
 const Header = (): JSX.Element => {
   return (
@@ -19,7 +19,7 @@ const Header = (): JSX.Element => {
         )}
       >
         <div className={twMerge('flex items-center h-full', 'lg:gap-8')}>
-          <Logo />
+          <HeaderLogo />
 
           <div
             className={twMerge(
@@ -27,7 +27,7 @@ const Header = (): JSX.Element => {
               'lg:flex lg:items-center lg:gap-4 lg:h-full'
             )}
           >
-            <DesktopMenu menu={leftMenu} />
+            <HeaderMenuDesktop headerMenu={headerLeftMenu} />
           </div>
         </div>
 
@@ -38,9 +38,9 @@ const Header = (): JSX.Element => {
               'lg:flex lg:items-center lg:gap-4 lg:h-full'
             )}
           >
-            <DesktopMenu menu={rightMenu} />
+            <HeaderMenuDesktop headerMenu={headerRightMenu} />
           </div>
-          <MobileMenu />
+          <HeaderMenuMobile />
         </div>
       </nav>
     </header>
