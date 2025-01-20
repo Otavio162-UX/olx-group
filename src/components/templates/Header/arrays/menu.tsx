@@ -4,26 +4,41 @@ import { DropDownFollowUs } from '@/components/organisms/DropDown/DropDownFollow
 import { DropDownOurBusiness } from '@/components/organisms/DropDown/DropDownOurBusiness'
 import { InternalRoutes } from '@/routes/routes'
 
-type TMenu = Pick<IButtonMenu, 'link' | 'buttonTitle' | 'children'>
+type TMenu = Pick<
+  IButtonMenu,
+  'link' | 'buttonTitle' | 'children' | 'iconProps'
+>
 
 const whoWeAre: TMenu = {
   buttonTitle: 'Quem somos',
   children: <DropDownDefault dropDownDefault="whoWeAre" />,
+  iconProps: {
+    show: true,
+  },
 }
 
 const ourPortals: TMenu = {
   buttonTitle: 'Nossos portais',
   children: <DropDownDefault dropDownDefault="ourPortals" />,
+  iconProps: {
+    show: true,
+  },
 }
 
 const ourBusiness: TMenu = {
   buttonTitle: 'Nossos negócios',
   children: <DropDownOurBusiness />,
+  iconProps: {
+    show: true,
+  },
 }
 
 const followUs: TMenu = {
   buttonTitle: 'Nos siga',
   children: <DropDownFollowUs />,
+  iconProps: {
+    show: true,
+  },
 }
 
 export const menu: TMenu[] = [

@@ -3,8 +3,8 @@
 import { RenderSubmenuOurBusiness } from '@/components/molecules/DropDown/RenderSubmenuOurBusiness'
 import { WrapperDropDown } from '@/components/molecules/DropDown/WrapperDropDown'
 import { ButtonMenu } from '@/components/molecules/Menu/ButtonMenu'
-import { mdiChevronRight } from '@mdi/js'
 import { twMerge } from 'tailwind-merge'
+import { buttonIconProps } from './variables/buttonIconProps'
 import { ourBusinessSubmenu } from './variables/ourBusinessSubmenu'
 
 const DropDownOurBusiness = (): JSX.Element => {
@@ -16,8 +16,7 @@ const DropDownOurBusiness = (): JSX.Element => {
             key={`our-business-submenu-title-${indexItem}`}
             buttonTitle={item.title}
             buttonClassName="pl-8 pr-0"
-            iconPath={mdiChevronRight}
-            iconClassName="rotate-0"
+            iconProps={buttonIconProps}
             menuOpenRedirect
             link={item.link}
           >
@@ -42,7 +41,7 @@ const DropDownOurBusiness = (): JSX.Element => {
               buttonTitle={item.title}
               wrapperElementClassName={twMerge('lg:h-max')}
               buttonClassName={twMerge('lg:text-lg font-ZonaPro lg:py-0')}
-              iconPath={mdiChevronRight}
+              iconProps={buttonIconProps}
             />
 
             <div className="flex flex-col gap-6">

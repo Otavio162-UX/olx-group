@@ -43,11 +43,15 @@ export default {
           120: 'var(--secondary-120)',
           130: 'var(--secondary-130)',
         },
+        orange: {
+          100: 'var(--orange-100)',
+        },
         neutral: {
           70: 'var(--neutral-70)',
           80: 'var(--neutral-80)',
           90: 'var(--neutral-90)',
           100: 'var(--neutral-100)',
+          120: 'var(--neutral-120)',
           130: 'var(--neutral-130)',
         },
         danger: {

@@ -5,15 +5,16 @@ export const InternalRoutes = {
   AUTOS: '/autos',
   IMMOBILE: '/immobile',
   EVENTS: '/events',
-  CONSUMER_GOODS: '/consumer-goods',
+  CONSUMER_GOODS: '/consumerGoods',
   ADVERTISING: '/advertising',
+  WHO_WE_ARE: '/whoWeAre',
 }
 
 export const ExternalRoutes = {
-  TWITTER: 'https://twitter.com/datazap',
-  LINKEDIN: 'https://twitter.com/datazap',
-  INSTAGRAM: 'https://twitter.com/datazap',
-  FACEBOOK: 'https://twitter.com/datazap',
-  YOUTUBE: 'https://twitter.com/datazap',
-  TIKTOK: 'https://twitter.com/datazap',
+  TWITTER: 'https://twitter.com/datazap', // substituir depois
+  LINKEDIN: 'https://twitter.com/datazap', // substituir depois
+  INSTAGRAM: 'https://twitter.com/datazap', // substituir depois
+  FACEBOOK: 'https://twitter.com/datazap', // substituir depois
+  YOUTUBE: 'https://twitter.com/datazap', // substituir depois
+  TIKTOK: 'https://twitter.com/datazap', // substituir depois
 }

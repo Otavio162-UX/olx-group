@@ -3,7 +3,6 @@
 import { Button } from '@/components/atoms/Button'
 import { mdiChevronDown } from '@mdi/js'
 import Icon from '@mdi/react'
-import { useMemo } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { IButtonMenu } from './ButtonMenu.interface'
 import { useInitButtonMenu } from './hooks/useInitButtonMenu'
@@ -12,12 +11,11 @@ import { menuClassName } from './variables/classNames'
 const ButtonMenu = ({
   wrapperElementClassName,
   buttonClassName,
-  iconClassName,
   link,
   buttonTitle,
   children,
   changeHeaderColors,
-  iconPath,
+  iconProps = { show: false, iconPath: '', iconClassName: '' },
   menuOpenRedirect,
 }: IButtonMenu): JSX.Element => {
   const { ref, toggleMenu, openMenu, buttonsTargetId } = useInitButtonMenu({
@@ -25,8 +23,6 @@ const ButtonMenu = ({
     changeHeaderColors,
     menuOpenRedirect,
   })
-
-  const currentIcon = useMemo(() => iconPath || mdiChevronDown, [])
 
   return (
     <div
@@ -51,13 +47,13 @@ const ButtonMenu = ({
       >
         {buttonTitle}
 
-        {(!link || iconPath) && (
+        {iconProps.show && (
           <Icon
-            path={currentIcon}
+            path={iconProps.iconPath || mdiChevronDown}
             size={1}
             className={twMerge(
               openMenu && menuClassName.iconRotate,
-              iconClassName
+              iconProps.iconClassName
             )}
           />
         )}

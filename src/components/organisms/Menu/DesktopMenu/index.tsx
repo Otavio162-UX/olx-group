@@ -11,6 +11,7 @@ const DesktopMenu = ({ menu }: IDesktopMenu): JSX.Element[] => {
       buttonTitle={item.buttonTitle}
       link={item.link}
       changeHeaderColors={changeHeaderDesktopColors}
+      iconProps={item.iconProps}
     >
       {item.children}
     </ButtonMenu>

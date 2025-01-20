@@ -1,7 +1,9 @@
 import { FooterLinksSection } from '@/components/organisms/Footer/FooterLinksSection'
 import { Tabination } from '@/components/organisms/Footer/Tabination'
+import { Tabs } from '@/components/organisms/Footer/Tabs'
 import { twMerge } from 'tailwind-merge'
 import { buttonsTab } from './arrays/buttonsTab'
+import { footerTabs } from './arrays/footerTabs'
 
 const Footer = (): JSX.Element => {
   return (
@@ -12,11 +14,12 @@ const Footer = (): JSX.Element => {
       )}
     >
       <Tabination buttonsTab={buttonsTab}>
-        <div>oi</div>
-        <div>Autos</div>
-        <div>Bens de consumo</div>
-        <div>Eventos</div>
-        <div>Publicidade</div>
+        {footerTabs.map((tabNavigation, indexTabNavigation) => (
+          <Tabs
+            navigationList={tabNavigation}
+            key={`tab-footer-${indexTabNavigation}`}
+          />
+        ))}
       </Tabination>
 
       <FooterLinksSection />

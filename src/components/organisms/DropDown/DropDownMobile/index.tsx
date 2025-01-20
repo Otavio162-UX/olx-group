@@ -9,6 +9,7 @@ const DropDownMobile = (): JSX.Element => {
           key={`button-menu-${indexItem}`}
           link={item.link}
           buttonTitle={item.buttonTitle}
+          iconProps={item.iconProps}
         >
           {item.children}
         </ButtonMenu>

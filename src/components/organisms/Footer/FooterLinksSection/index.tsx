@@ -10,6 +10,7 @@ const FooterLinksSection = (): JSX.Element => {
     <nav
       className={twMerge(
         'w-full flex flex-col gap-6 border-t border-neutral-90 py-6',
+        'md:items-center',
         'lg:flex-row lg:justify-between'
       )}
     >
