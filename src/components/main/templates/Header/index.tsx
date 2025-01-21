@@ -8,41 +8,43 @@ const Header = (): JSX.Element => {
   return (
     <header
       className={twMerge(
-        'h-[4.5rem] bg-header-mobile-background relative',
-        'lg:bg-header-desktop-background'
+        'h-[4.5rem] bg-header-mobile-background w-full sticky top-0 z-10',
+        'lg:bg-header-desktop-background lg:static'
       )}
     >
-      <nav
-        className={twMerge(
-          'wrapperContainer h-full flex items-center justify-between',
-          'lg:max-w-container1328'
-        )}
-      >
-        <div className={twMerge('flex items-center h-full', 'lg:gap-8')}>
-          <HeaderLogo />
+      <div className={'w-full h-full relative'}>
+        <nav
+          className={twMerge(
+            'wrapperContainer h-full flex items-center justify-between',
+            'lg:max-w-container1328'
+          )}
+        >
+          <div className={twMerge('flex items-center h-full', 'lg:gap-8')}>
+            <HeaderLogo />
 
-          <div
-            className={twMerge(
-              'hidden',
-              'lg:flex lg:items-center lg:gap-4 lg:h-full'
-            )}
-          >
-            <HeaderMenuDesktop headerMenu={headerLeftMenu} />
+            <div
+              className={twMerge(
+                'hidden',
+                'lg:flex lg:items-center lg:gap-4 lg:h-full'
+              )}
+            >
+              <HeaderMenuDesktop headerMenu={headerLeftMenu} />
+            </div>
           </div>
-        </div>
 
-        <div className="h-full">
-          <div
-            className={twMerge(
-              'hidden',
-              'lg:flex lg:items-center lg:gap-4 lg:h-full'
-            )}
-          >
-            <HeaderMenuDesktop headerMenu={headerRightMenu} />
+          <div className="h-full">
+            <div
+              className={twMerge(
+                'hidden',
+                'lg:flex lg:items-center lg:gap-4 lg:h-full'
+              )}
+            >
+              <HeaderMenuDesktop headerMenu={headerRightMenu} />
+            </div>
+            <HeaderMenuMobile />
           </div>
-          <HeaderMenuMobile />
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   )
 }
