@@ -1,4 +1,4 @@
-import { HeaderLogo } from '@/components/main/atoms/Header/HeaderLogo'
+import { HeaderLogo } from '@/components/main/atoms/HeaderLogo'
 import { HeaderMenuDesktop } from '@/components/main/organisms/HeaderMenu/HeaderMenuDesktop'
 import { HeaderMenuMobile } from '@/components/main/organisms/HeaderMenu/HeaderMenuMobile'
 import { twMerge } from 'tailwind-merge'

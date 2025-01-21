@@ -1,6 +1,6 @@
 import { Button } from '@/components/generic/atoms/Button'
 import { Text } from '@/components/generic/atoms/Text'
-import { FooterSocialMedia } from '@/components/main/molecules/Footer/FooterSocialMedia'
+import { FooterSocialMedia } from '@/components/main/molecules/FooterSocialMedia'
 import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
 import { footerLinks } from './arrays/links'

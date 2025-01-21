@@ -1,10 +1,10 @@
 import { Button } from '@/components/generic/atoms/Button'
+import { Input } from '@/components/generic/atoms/Input'
 import { Loading } from '@/components/generic/atoms/Loading'
+import { ErrorMessage } from '@/components/generic/molecules/ErrorMessage'
 import { mdiMagnify } from '@mdi/js'
 import Icon from '@mdi/react'
 import { twMerge } from 'tailwind-merge'
-import { Input } from '../../atoms/Input'
-import { ErrorMessage } from '../../molecules/ErrorMessage'
 import { ISearchInput } from './SearchInput.interface'
 import { searchInputProps } from './variables/searchInputProps'
 

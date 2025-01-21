@@ -1,11 +1,13 @@
-import { Button } from '@/components/generic/atoms/Button'
+import { BusinessFront } from '@/components/main/templates/Home/HomeBusinessFront'
+import { HomeOlxGroup } from '@/components/main/templates/Home/HomeOlxGroup'
 
 const Home = (): JSX.Element => {
   return (
-    <main className="wrapperContainer max-w-container1328">
-      <Button variant="primary" size="small" loading>
-        Primary
-      </Button>
+    <main>
+      <section className="wrapperContainer max-w-container1376">
+        <HomeOlxGroup />
+        <BusinessFront />
+      </section>
     </main>
   )
 }

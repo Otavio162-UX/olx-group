@@ -16,6 +16,7 @@ export default {
         Inter: 'var(--font-Inter)',
       },
       maxWidth: {
+        container1376: '86rem',
         container1328: '83rem',
         container1056: '66rem',
       },
@@ -48,6 +49,7 @@ export default {
           100: 'var(--orange-100)',
         },
         neutral: {
+          light: 'var(--neutral-light)',
           70: 'var(--neutral-70)',
           80: 'var(--neutral-80)',
           90: 'var(--neutral-90)',
