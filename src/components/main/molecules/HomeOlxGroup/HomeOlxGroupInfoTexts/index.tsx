@@ -10,11 +10,8 @@ const HomeOlxGroupInfoTexts = ({
     <div className={twMerge('flex flex-col gap-2 mx-auto', 'lg:mx-0')}>
       <Title
         tag="h2"
-        className={twMerge(
-          'text-[2rem] font-ZonaPro text-primary-100 text-center',
-          'lg:text-4xl',
-          'xl:text-5xl'
-        )}
+        variant="sectionTitle"
+        className={twMerge('md:text-[1.8125rem]', 'lg:text-4xl', 'xl:text-5xl')}
       >
         {title}
       </Title>

@@ -5,13 +5,7 @@ import { twMerge } from 'tailwind-merge'
 const HomeOlxGroupTitles = (): JSX.Element => {
   return (
     <div className="flex flex-col gap-6 mx-auto max-w-[48rem]">
-      <Title
-        tag="h2"
-        className={twMerge(
-          'text-[2rem] text-primary-100 text-center font-ZonaPro',
-          'lg:text-5xl'
-        )}
-      >
+      <Title tag="h2" variant="sectionTitle">
         Conectamos todos os brasileiros a novas formas de consumir e fazer
         negócio.
       </Title>

@@ -7,6 +7,7 @@ const BrandGroup = (): JSX.Element => {
     <div
       className={twMerge(
         'grid grid-cols-1 flex-1 gap-x-12 gap-y-6',
+        'md:grid-cols-2',
         'lg:grid-cols-3 lg:gap-x-6',
         'xl:gap-x-12'
       )}

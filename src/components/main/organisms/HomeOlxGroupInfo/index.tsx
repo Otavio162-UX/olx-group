@@ -7,6 +7,7 @@ const HomeOlxGroupInfo = (): JSX.Element => {
     <div
       className={twMerge(
         'grid grid-cols-1 gap-x-14 gap-y-8',
+        'md:grid-cols-3 md:gap-x-4',
         'lg:grid-cols-3 lg:gap-x-8',
         'xl:gap-x-14'
       )}
