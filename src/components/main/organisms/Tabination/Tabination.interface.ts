@@ -6,6 +6,11 @@ export interface IButtonTabProps {
 }
 
 export interface ITabination {
+  wrapperElementClassName?: string
+  wrapperRightComponentClassName?: string
+  tabinationButtonsWrapperClassName?: string
+
+  RightComponent?: JSX.Element
   children: JSX.Element | JSX.Element[]
   buttonsTab: IButtonTabProps[]
 }

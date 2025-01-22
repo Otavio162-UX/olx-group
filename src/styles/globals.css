@@ -31,12 +31,18 @@
   --secondary-120: #467332;
   --secondary-130: #233919;
 
+  --green-70: #c0f2a9;
+  --green-90: #4bd60a;
+
+  --slide-inactive-ball: #9d96a7;
   --neutral-light: #aaaaaa;
 
+  --neutral-60: #f5f6f7;
   --neutral-70: #ffffff;
   --neutral-80: #5e6a82;
   --neutral-90: #cfd4dd;
   --neutral-100: #3c4453;
+  --neutral-110: #5e6a82;
   --neutral-120: #1d1d1d;
   --neutral-130: #1a1d23;
 
@@ -44,6 +50,8 @@
 
   --placeholder: #8994a9;
 
+  --orange-70: #ffdb9a;
+  --orange-90: #fa8c4d;
   --orange-100: #ff5e00;
 
   --danger-100: #e22828;

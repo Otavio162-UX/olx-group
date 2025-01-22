@@ -46,14 +46,23 @@ export default {
         },
         placeholder: 'var(--placeholder)',
         orange: {
+          70: 'var(--orange-70)',
+          90: 'var(--orange-90)',
           100: 'var(--orange-100)',
         },
+        green: {
+          70: 'var(--green-70)',
+          90: 'var(--green-90)',
+        },
+        'slide-inactive-ball': 'var(--slide-inactive-ball)',
         neutral: {
           light: 'var(--neutral-light)',
+          60: 'var(--neutral-60)',
           70: 'var(--neutral-70)',
           80: 'var(--neutral-80)',
           90: 'var(--neutral-90)',
           100: 'var(--neutral-100)',
+          110: 'var(--neutral-110)',
           120: 'var(--neutral-120)',
           130: 'var(--neutral-130)',
         },

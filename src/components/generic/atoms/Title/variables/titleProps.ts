@@ -7,6 +7,10 @@ const classNameVariants: TObjectVariant<TTitleVariants> = {
     'text-[2rem] text-primary-100 text-center font-ZonaPro',
     'lg:text-5xl'
   ),
+  titleTab: twMerge(
+    'text-2xl text-primary-100 leading-tight',
+    'lg:text-[2rem]'
+  ),
 }
 
 export const titleProps = {

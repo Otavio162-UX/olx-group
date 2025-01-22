@@ -1,32 +1,52 @@
 import { Inter as inter, Roboto as roboto } from 'next/font/google'
-import { twMerge } from 'tailwind-merge'
 import localFont from 'next/font/local'
+import { twMerge } from 'tailwind-merge'
 
 const ZonaPro = localFont({
   src: [
     {
-      path: './zonaPro/zonaPro-Bold.ttf',
+      path: './zonaPro/ZonaPro-Black.otf',
+      style: 'Black',
+      weight: '900',
+    },
+    {
+      path: './zonaPro/ZonaPro-ExtraBold.otf',
+      style: 'ExtraBold',
+      weight: '800',
+    },
+    {
+      path: './zonaPro/ZonaPro-Bold.otf',
       style: 'Bold',
       weight: '700',
     },
     {
-      path: './zonaPro/zonaPro-Regular.ttf',
+      path: './zonaPro/ZonaPro-SemiBold.otf',
+      style: 'SemiBold',
+      weight: '600',
+    },
+    {
+      path: './zonaPro/ZonaPro-Ultra.otf',
+      style: 'SemiBold',
+      weight: '500',
+    },
+    {
+      path: './zonaPro/ZonaPro-Regular.otf',
       style: 'Regular',
       weight: '400',
     },
     {
-      path: './zonaPro/zonaPro-Light.ttf',
+      path: './zonaPro/ZonaPro-Light.otf',
       style: 'Light',
       weight: '300',
     },
     {
-      path: './zonaPro/zonaPro-Thin.ttf',
+      path: './zonaPro/ZonaPro-Thin.otf',
       style: 'Thin',
       weight: '200',
     },
   ],
   variable: '--font-ZonaPro',
-  weight: '200 300 400 700',
+  weight: '200 300 400 500 600 700 800 900',
 })
 
 export const Roboto = roboto({

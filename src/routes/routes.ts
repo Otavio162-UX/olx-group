@@ -8,6 +8,8 @@ export const InternalRoutes = {
   CONSUMER_GOODS: '/consumerGoods',
   ADVERTISING: '/advertising',
   WHO_WE_ARE: '/whoWeAre',
+  BLOG_AUTOS: '/blog/autos',
+  BLOG_IMMOBILE: '/blog/immobile',
 }
 
 export const ExternalRoutes = {

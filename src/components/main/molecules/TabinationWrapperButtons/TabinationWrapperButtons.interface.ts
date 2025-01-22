@@ -6,5 +6,6 @@ export interface ICanScrollState {
 }
 
 export interface ITabinationWrapperButtons {
+  wrapperElementClassName?: string
   children: ReactNode
 }

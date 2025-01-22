@@ -7,7 +7,7 @@ const HeaderDropDownWrapper = ({
   return (
     <nav
       className={twMerge(
-        'bg-primary-100 min-w-minContainer w-screen z-20',
+        'bg-primary-100 min-w-minContainer w-full z-20',
         'lg:absolute lg:top-full lg:left-0 lg:min-h-[19.0625rem] lg:py-6'
       )}
     >

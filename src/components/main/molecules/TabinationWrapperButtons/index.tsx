@@ -1,18 +1,20 @@
 'use client'
 
 import { ButtonScrollIndicator } from '@/components/main/atoms/Tabination/TabinationButtonIndicator'
+import { twMerge } from 'tailwind-merge'
 import { ITabinationWrapperButtons } from './TabinationWrapperButtons.interface'
 import { useInitTabinationWrapperButtons } from './hooks/useInitTabinationWrapperButtons'
 
 const TabinationWrapperButtons = ({
+  wrapperElementClassName,
   children,
 }: ITabinationWrapperButtons): JSX.Element => {
   const { canScroll, scrollContainerRef } = useInitTabinationWrapperButtons()
 
   return (
-    <nav className="w-full relative mb-6">
+    <nav className={twMerge('w-full relative', wrapperElementClassName)}>
       <div
-        className="flex items-center overflow-x-auto"
+        className={'flex items-center overflow-x-auto'}
         ref={scrollContainerRef}
       >
         {canScroll.left && <ButtonScrollIndicator variant="left" />}
