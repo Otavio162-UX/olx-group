@@ -7,8 +7,8 @@ const ballClassNameVariants: TObjectVariant<TNewsCardVariants> = {
 }
 
 const buttonClassNameVariants: TObjectVariant<TNewsCardVariants> = {
-  orange: 'bg-orange-70 hover:bg-orange-90',
-  green: 'bg-green-70 hover:bg-green-90',
+  orange: 'bg-orange-70 hover:bg-orange-90 active:bg-orange-90',
+  green: 'bg-green-70 hover:bg-green-90 active:bg-green-90',
 }
 
 export const newsCardProps = {
