@@ -1,12 +1,23 @@
-import { HeaderBlogSearchInput } from '@/components/blog/molecules/HeaderBlog/HeaderBlogSearchInput'
-import { headerBlogMenu } from '@/components/blog/templates/HeaderBlog/arrays/headerBlogProps'
+'use client'
+
+import { headerBlogMenu } from '@/components/blog/templates/HeaderBlog/arrays/headerBlogMenu'
 import { ButtonCollapsible } from '@/components/generic/molecules/ButtonCollapsible'
+import { SearchInput } from '@/components/generic/organisms/SearchInput'
+import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 const HeaderBlogDesktop = (): JSX.Element => {
+  const [search, setSearch] = useState('')
+
   return (
     <nav className={twMerge('hidden', 'lg:flex lg:items-center lg:gap-8')}>
-      <HeaderBlogSearchInput />
+      <div className={'w-[25rem]'}>
+        <SearchInput
+          value={search}
+          onChange={({ target }) => setSearch(target.value)}
+          onClick={() => console.log(search)}
+        />
+      </div>
 
       <div className="flex items-center gap-4">
         {headerBlogMenu.map((item, indexItem) => (
@@ -14,6 +25,7 @@ const HeaderBlogDesktop = (): JSX.Element => {
             key={`button-desktop-menu-${indexItem}`}
             buttonTitle={item.buttonTitle}
             link={item.link}
+            iconProps={item.iconProps}
           >
             {item.children}
           </ButtonCollapsible>

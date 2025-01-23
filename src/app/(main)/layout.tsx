@@ -1,13 +1,13 @@
-import { Footer } from '@/components/main/templates/Footer'
-import { Header } from '@/components/main/templates/Header'
+import { FooterMain } from '@/components/main/templates/FooterMain'
+import { HeaderMain } from '@/components/main/templates/HeaderMain'
 import { TRootLayoutParams } from '@/types/global'
 
 const MainLayout = ({ children }: TRootLayoutParams): JSX.Element => {
   return (
     <>
-      <Header />
+      <HeaderMain />
       {children}
-      <Footer />
+      <FooterMain />
     </>
   )
 }

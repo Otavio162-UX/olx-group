@@ -1,3 +1,4 @@
+import { FooterBlog } from '@/components/blog/templates/FooterBlog'
 import { HeaderBlog } from '@/components/blog/templates/HeaderBlog'
 import { TRootLayoutParams } from '@/types/global'
 
@@ -6,6 +7,7 @@ const LayoutBlog = ({ children }: TRootLayoutParams): JSX.Element => {
     <>
       <HeaderBlog />
       {children}
+      <FooterBlog />
     </>
   )
 }
