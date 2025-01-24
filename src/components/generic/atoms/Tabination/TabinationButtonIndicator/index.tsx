@@ -5,6 +5,7 @@ import { IButtonScrollIndicator } from './ButtonScrollIndicator.interface'
 import { tabinationButtonIndicatorProps } from './variables/tabinationButtonIndicatorProps'
 
 const ButtonScrollIndicator = ({
+  className,
   variant,
 }: IButtonScrollIndicator): JSX.Element => {
   const { classNameVariants, iconsVariants } = tabinationButtonIndicatorProps
@@ -14,7 +15,8 @@ const ButtonScrollIndicator = ({
       variant="clean"
       className={twMerge(
         'text-neutral-130 z-[1] absolute top-0 p-0 rounded-none bg-neutral-70',
-        classNameVariants[variant]
+        classNameVariants[variant],
+        className
       )}
     >
       <Icon path={iconsVariants[variant]} size={1.5} />

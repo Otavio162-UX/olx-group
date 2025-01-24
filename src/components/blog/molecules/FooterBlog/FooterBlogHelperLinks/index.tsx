@@ -1,5 +1,5 @@
 import { Button } from '@/components/generic/atoms/Button'
-import { footerHelperLinks } from '@/variables/footer/links'
+import { footerHelperLinks } from '@/variables'
 import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
 

@@ -15,14 +15,14 @@ const FooterBlogNavigationMobile = (): JSX.Element => {
             iconClassName: 'text-neutral-130',
           }}
           link={item.link}
-          buttonClassName="text-neutral-130 bg-neutral-70"
+          buttonClassName="text-neutral-130 bg-neutral-70 px-0"
         >
           <div>
             {item.submenu.map((subItem, indexSubItem) => (
               <FooterBlogSubTitleNavigation
                 link={subItem.link}
                 key={`link-${indexItem}-${indexSubItem}`}
-                titleClassName="px-10 py-2"
+                titleClassName="px-6 py-2"
               >
                 {subItem.title}
               </FooterBlogSubTitleNavigation>

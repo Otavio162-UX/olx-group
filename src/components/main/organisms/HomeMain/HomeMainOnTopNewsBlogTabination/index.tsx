@@ -3,8 +3,8 @@
 import { Button } from '@/components/generic/atoms/Button'
 import { Title } from '@/components/generic/atoms/Title'
 import { LoadingContainer } from '@/components/generic/molecules/LoadingContainer'
-import { NewsCard } from '@/components/generic/organisms/NewsCard'
 import { Tabination } from '@/components/generic/organisms/Tabination'
+import { HomeMainNewsCard } from '@/components/main/organisms/HomeMain/HomeMainNewsCard'
 import { homeMainOnTopNewsButtonsTab } from '@/components/main/templates/HomeMain/HomeMainOnTopNews/arrays/homeMainOnTopNews'
 import { InternalRoutes } from '@/routes/routes'
 import { mdiChevronRight } from '@mdi/js'
@@ -48,7 +48,7 @@ const HomeMainOnTopNewsBlogTabination = (): JSX.Element => {
                 key={`slide-home-on-news-blog-${indexSlide}-${indexCard}`}
                 className="max-w-[308px]"
               >
-                <NewsCard {...card} />
+                <HomeMainNewsCard {...card} />
               </SwiperSlide>
             ))}
           </Swiper>

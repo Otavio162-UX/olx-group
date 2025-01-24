@@ -3,7 +3,9 @@ import { mdiCloseCircleOutline } from '@mdi/js'
 import Icon from '@mdi/react'
 import { IErrorMessage } from './ErrorMessage.interface'
 
-const ErrorMessage = ({ message }: IErrorMessage): JSX.Element => {
+const ErrorMessage = ({ message }: IErrorMessage): JSX.Element | null => {
+  if (!message) return null
+
   return (
     <div className="flex gap-1">
       <Icon

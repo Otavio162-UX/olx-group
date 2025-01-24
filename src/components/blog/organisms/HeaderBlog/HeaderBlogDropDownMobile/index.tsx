@@ -31,7 +31,7 @@ const HeaderBlogDropDownMobile = () => {
                   ...item.iconProps,
                   iconClassName: 'text-neutral-130',
                 }}
-                buttonClassName="bg-neutral-70 text-neutral-130"
+                buttonClassName="bg-neutral-70 text-neutral-130 px-0 mx-auto"
               >
                 {item.children}
               </ButtonCollapsible>

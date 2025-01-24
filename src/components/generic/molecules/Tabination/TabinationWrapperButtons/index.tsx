@@ -1,15 +1,15 @@
 'use client'
 
 import { ButtonScrollIndicator } from '@/components/generic/atoms/Tabination/TabinationButtonIndicator'
+import { useInitCanScroll } from '@/hooks/useInitCanScroll'
 import { twMerge } from 'tailwind-merge'
 import { ITabinationWrapperButtons } from './TabinationWrapperButtons.interface'
-import { useInitTabinationWrapperButtons } from './hooks/useInitTabinationWrapperButtons'
 
 const TabinationWrapperButtons = ({
   wrapperElementClassName,
   children,
 }: ITabinationWrapperButtons): JSX.Element => {
-  const { canScroll, scrollContainerRef } = useInitTabinationWrapperButtons()
+  const { canScroll, scrollContainerRef } = useInitCanScroll()
 
   return (
     <nav className={twMerge('w-full relative', wrapperElementClassName)}>

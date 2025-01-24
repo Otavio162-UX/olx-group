@@ -5,10 +5,6 @@ import { Navigation, Pagination } from 'swiper/modules'
 import { SwiperSlide } from 'swiper/react'
 import { twMerge } from 'tailwind-merge'
 
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-
 import { ImageComponent } from '@/components/generic/atoms/ImageComponent'
 import { LoadingContainer } from '@/components/generic/molecules/LoadingContainer'
 import { homeMainSlide } from './arrays/homeMainSlide'

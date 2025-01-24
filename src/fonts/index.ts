@@ -1,4 +1,8 @@
-import { Inter as inter, Roboto as roboto } from 'next/font/google'
+import {
+  Inter as inter,
+  Nunito_Sans as nunitoSans,
+  Roboto as roboto,
+} from 'next/font/google'
 import localFont from 'next/font/local'
 import { twMerge } from 'tailwind-merge'
 
@@ -61,9 +65,16 @@ export const Inter = inter({
   variable: '--font-Inter',
 })
 
+export const NunitoSans = nunitoSans({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-Nunito-Sans',
+})
+
 export const allFonts = twMerge(
   ZonaPro.variable,
   Roboto.className,
   Roboto.variable,
-  Inter.variable
+  Inter.variable,
+  NunitoSans.variable
 )

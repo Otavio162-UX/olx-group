@@ -14,8 +14,10 @@ export default {
         ZonaPro: 'var(--font-ZonaPro)',
         Roboto: 'var(--font-Roboto)',
         Inter: 'var(--font-Inter)',
+        NunitoSans: 'var(--font-Nunito-Sans)',
       },
       maxWidth: {
+        container1920: '120rem',
         container1376: '86rem',
         container1328: '83rem',
         container1056: '66rem',
@@ -49,6 +51,7 @@ export default {
           70: 'var(--orange-70)',
           90: 'var(--orange-90)',
           100: 'var(--orange-100)',
+          110: 'var(--orange-110)',
         },
         green: {
           70: 'var(--green-70)',
