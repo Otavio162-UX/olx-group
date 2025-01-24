@@ -1,3 +1,4 @@
+import { HomeBlogSubscribeToNewseller } from '@/components/blog/molecules/HomeBlog/HomeBlogSubscribeToNewseller'
 import { HomeBlogArticles } from '@/components/blog/templates/HomeBlog/HomeBlogArticles'
 import { HomeBlogEbooks } from '@/components/blog/templates/HomeBlog/HomeBlogEbooks'
 import { HomeBlogLastNews } from '@/components/blog/templates/HomeBlog/HomeBlogLastNews'
@@ -15,6 +16,8 @@ const BlogPage = () => {
         <HomeBlogEbooks />
       </section>
       <HomeBlogSubscribe />
+
+      <HomeBlogSubscribeToNewseller />
     </main>
   )
 }

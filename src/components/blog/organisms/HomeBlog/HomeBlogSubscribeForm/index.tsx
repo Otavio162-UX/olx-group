@@ -19,7 +19,6 @@ const HomeBlogSubscribeForm = (): JSX.Element => {
             className="h-12"
             value={email}
             onChange={({ target }) => setEmail(target.value)}
-            name="email"
             minLength={8}
             maxLength={100}
           />
@@ -33,7 +32,7 @@ const HomeBlogSubscribeForm = (): JSX.Element => {
 
       <Button
         size="medium"
-        className="bg-orange-100 hover:bg-orange-110 py-3 px-6 active:bg-orange-110 h-max rounded-lg border-0"
+        className="bg-orange-100 hover:bg-orange-110 py-3 px-6 active:bg-orange-110 h-max rounded-lg border-0 w-[7.1875rem]"
         type="submit"
         loading={loading}
       >
