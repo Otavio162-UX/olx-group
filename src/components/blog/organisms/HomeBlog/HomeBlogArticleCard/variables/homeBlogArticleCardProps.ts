@@ -1,5 +1,5 @@
 import { TObjectVariant } from '@/types/global'
-import { TNewsCardVariants } from '../NewsCard.interface'
+import { TNewsCardVariants } from '../HomeBlogArticleCard.interface'
 
 const ballClassNameVariants: TObjectVariant<TNewsCardVariants> = {
   orange: 'bg-orange-90',
@@ -11,7 +11,7 @@ const buttonClassNameVariants: TObjectVariant<TNewsCardVariants> = {
   green: 'bg-green-70 hover:bg-green-90 active:bg-green-90',
 }
 
-export const newsCardProps = {
+export const homeBlogArticleCardProps = {
   buttonClassNameVariants,
   ballClassNameVariants,
 }

@@ -1,6 +1,6 @@
-import { INewsCard } from '@/components/generic/organisms/NewsCard/NewsCard.interface'
+import { IHomeMainNewsCard } from '@/components/main/organisms/HomeMain/HomeMainNewsCard/HomeMainNewsCard.interface'
 
-const all: INewsCard[] = [
+const all: IHomeMainNewsCard[] = [
   {
     imageSrc:
       'https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Amazing-Background-Images-Nature.jpg',
@@ -89,7 +89,7 @@ const all: INewsCard[] = [
   },
 ]
 
-const immobile: INewsCard[] = [
+const immobile: IHomeMainNewsCard[] = [
   {
     imageSrc:
       'https://th.bing.com/th/id/R.ffe459582c8e4dc676d73e4b07dcabc0?rik=6SMf4H4I5ChVpQ&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f08%2fBeautiful-nature-cool-images-background-hd.jpg&ehk=E1s4F45rJN%2b%2feGvJDIkl0dBO1%2bRXNfZHrbfDQr2ZK9Y%3d&risl=&pid=ImgRaw&r=0',
@@ -129,7 +129,7 @@ const immobile: INewsCard[] = [
   },
 ]
 
-const autos: INewsCard[] = [
+const autos: IHomeMainNewsCard[] = [
   {
     imageSrc:
       'https://th.bing.com/th/id/OIP.Z_PIeIRDajXPmZHROt-T_QHaEK?rs=1&pid=ImgDetMain',
@@ -181,7 +181,7 @@ const autos: INewsCard[] = [
   },
 ]
 
-export const homeMainOnTopNewsBlogTabination: INewsCard[][] = [
+export const homeMainOnTopNewsBlogTabination: IHomeMainNewsCard[][] = [
   all,
   immobile,
   autos,

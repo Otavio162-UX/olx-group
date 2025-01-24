@@ -1,8 +1,7 @@
 export type TNewsCardVariants = 'orange' | 'green'
 
-export interface INewsCard {
+export interface IHomeBlogArticleCard {
   imageSrc: string
-  imageClassName: string
   variant: TNewsCardVariants
   buttonTitle: string
   newsTitle: string
