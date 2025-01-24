@@ -10,7 +10,7 @@ const HeaderBlogDropDownMobile = () => {
   return (
     <nav
       className={twMerge(
-        'bg-neutral-70 min-w-minContainer w-full absolute top-full left-0 z-20 py-6 h-[calc(100vh_-_72px)] overflow-y-auto'
+        'bg-neutral-70 min-w-minContainer w-full absolute top-full left-0 z-20 py-6 h-[calc(100vh_-_54px)] overflow-y-auto'
       )}
     >
       <div className="wrapperContainer max-w-container1328 flex flex-col gap-4">

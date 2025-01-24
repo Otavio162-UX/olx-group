@@ -43,7 +43,7 @@ interface IReturnUseGetHomeBlogArticles {
 
 export const useGetHomeBlogArticles = (): IReturnUseGetHomeBlogArticles => {
   const [page, setPage] = useState(0)
-  const [totalPages, setTotalPages] = useState(2)
+  const [totalPages] = useState(2)
   const [loading, setLoading] = useState(false)
 
   const [articles, setArticles] = useState(allArticles[0])

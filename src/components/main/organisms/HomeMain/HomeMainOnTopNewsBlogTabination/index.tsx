@@ -17,7 +17,7 @@ import { homeMainOnTopNewsBlogTabination } from './arrays/homeMainOnTopNewsBlogT
 
 const Swiper = dynamic(async () => (await import('swiper/react')).Swiper, {
   ssr: false,
-  loading: () => <LoadingContainer wrapperElementClassName="h-[15.625rem]" />,
+  loading: () => <LoadingContainer wrapperElementClassName="h-[25.25rem]" />,
 })
 
 const HomeMainOnTopNewsBlogTabination = (): JSX.Element => {

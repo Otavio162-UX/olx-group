@@ -3,7 +3,7 @@ import { headerMainMenu } from '@/components/main/templates/HeaderMain/arrays/he
 
 const HeaderMainDropDownMobile = (): JSX.Element => {
   return (
-    <div className="absolute top-full left-0 bg-primary-100 min-w-minContainer w-screen z-20 py-6 h-[calc(100vh_-_72px)] overflow-y-auto">
+    <div className="absolute top-full left-0 bg-primary-100 min-w-minContainer w-screen z-20 py-6 h-[calc(100vh_-_54px)] overflow-y-auto">
       {headerMainMenu.map((item, indexItem) => (
         <ButtonCollapsible
           key={`button-menu-${indexItem}`}

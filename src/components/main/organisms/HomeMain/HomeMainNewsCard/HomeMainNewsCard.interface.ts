@@ -1,9 +1,9 @@
-export type TNewsCardVariants = 'orange' | 'green'
+import { TCategoryVariants } from '@/components/generic/atoms/CategoryCard/CategoryCard.interface'
 
 export interface IHomeMainNewsCard {
   imageSrc: string
   imageClassName: string
-  variant: TNewsCardVariants
+  variant: TCategoryVariants
   buttonTitle: string
   newsTitle: string
   newsDescription: string

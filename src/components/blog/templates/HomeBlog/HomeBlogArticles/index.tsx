@@ -23,8 +23,9 @@ const HomeBlogArticles = (): JSX.Element => {
       ) : (
         <div
           className={twMerge(
-            'flex flex-col gap-4',
-            'lg:grid lg:grid-cols-3 lg:gap-12'
+            'grid grid-cols-1 gap-4',
+            'md:grid-cols-2',
+            'lg:grid-cols-3 lg:gap-12'
           )}
         >
           {articles.map((article, indexArticle) => (

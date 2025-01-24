@@ -3,8 +3,8 @@
 import { Button } from '@/components/generic/atoms/Button'
 import { Title } from '@/components/generic/atoms/Title'
 import { LoadingContainer } from '@/components/generic/molecules/LoadingContainer'
-import { EbookCard } from '@/components/generic/organisms/EbookCard'
 import { Tabination } from '@/components/generic/organisms/Tabination'
+import { HomeMainEbookCard } from '@/components/main/organisms/HomeMain/HomeMainEbookCard'
 import { homeMainOnTopNewsButtonsTab } from '@/components/main/templates/HomeMain/HomeMainOnTopNews/arrays/homeMainOnTopNews'
 import { InternalRoutes } from '@/routes/routes'
 import { mdiChevronRight } from '@mdi/js'
@@ -17,7 +17,7 @@ import { homeMainOnTopNewsEbookTabination } from './arrays/homeMainOnTopNewsEboo
 
 const Swiper = dynamic(async () => (await import('swiper/react')).Swiper, {
   ssr: false,
-  loading: () => <LoadingContainer wrapperElementClassName="h-[15.625rem]" />,
+  loading: () => <LoadingContainer wrapperElementClassName="h-[12.8125rem]" />,
 })
 
 const HomeMainOnTopNewsEbookTabination = (): JSX.Element => {
@@ -48,7 +48,7 @@ const HomeMainOnTopNewsEbookTabination = (): JSX.Element => {
                 key={`slide-home-on-news-ebook-${indexSlide}-${indexCard}`}
                 className="max-w-[19.625rem] py-4"
               >
-                <EbookCard {...card} />
+                <HomeMainEbookCard {...card} />
               </SwiperSlide>
             ))}
           </Swiper>

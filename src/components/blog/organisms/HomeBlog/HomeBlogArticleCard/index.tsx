@@ -1,10 +1,10 @@
-import { Button } from '@/components/generic/atoms/Button'
+import { CategoryCard } from '@/components/generic/atoms/CategoryCard'
+import { ColorfulEmptyCircle } from '@/components/generic/atoms/ColorfulEmptyCircle'
 import { ImageComponent } from '@/components/generic/atoms/ImageComponent'
 import { Text } from '@/components/generic/atoms/Text'
 import { Title } from '@/components/generic/atoms/Title'
 import { twMerge } from 'tailwind-merge'
 import { IHomeBlogArticleCard } from './HomeBlogArticleCard.interface'
-import { homeBlogArticleCardProps } from './variables/homeBlogArticleCardProps'
 
 const HomeBlogArticleCard = ({
   imageSrc,
@@ -16,9 +16,6 @@ const HomeBlogArticleCard = ({
   readTime,
   variant,
 }: IHomeBlogArticleCard): JSX.Element => {
-  const { ballClassNameVariants, buttonClassNameVariants } =
-    homeBlogArticleCardProps
-
   return (
     <div className={twMerge('w-full flex', 'lg:flex-col lg:gap-6')}>
       <ImageComponent
@@ -34,15 +31,9 @@ const HomeBlogArticleCard = ({
 
       <div className={twMerge('p-2', 'lg:p-0 lg:flex lg:flex-col lg:gap-6')}>
         <div className="w-full flex flex-col gap-2">
-          <Button
-            className={twMerge(
-              'max-w-max text-[.625rem] px-2 py-0.5 rounded-sm text-neutral-120',
-              'lg:px-3 lg:py-2 lg:text-sm lg:rounded-lg',
-              buttonClassNameVariants[variant]
-            )}
-          >
+          <CategoryCard variant={variant} version="smaller">
             {buttonTitle}
-          </Button>
+          </CategoryCard>
 
           <Title
             tag="h4"
@@ -50,25 +41,25 @@ const HomeBlogArticleCard = ({
               'font-ZonaPro text-sm font-semibold text-neutral-130 line-clamp-3',
               'lg:line-clamp-2 lg:text-2xl'
             )}
+            title={newsTitle}
           >
             {newsTitle}
           </Title>
 
           <Text
             tag="p"
-            className={twMerge('hidden', 'lg:text-xl lg:text-neutral-110')}
+            className={twMerge(
+              'hidden',
+              'lg:text-xl lg:text-neutral-110 lg:line-clamp-1'
+            )}
+            title={newsDescription}
           >
             {newsDescription}
           </Text>
         </div>
 
         <div className={twMerge('hidden', 'lg:flex lg:items-center lg:gap-4')}>
-          <span
-            className={twMerge(
-              'w-12 h-12 rounded-full',
-              ballClassNameVariants[variant]
-            )}
-          />
+          <ColorfulEmptyCircle variant={variant} />
 
           <div className="flex flex-col">
             <Text tag="p" className="text-xl text-neutral-100">

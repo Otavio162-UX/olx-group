@@ -1,5 +1,5 @@
 import { HomeBlogBackgroundImageShadow } from '@/components/blog/molecules/HomeBlog/HomeBlogBackgroundImageShadow'
-import { ButtonColor } from '@/components/generic/atoms/ButtonColor'
+import { CategoryCard } from '@/components/generic/atoms/CategoryCard'
 import { Title } from '@/components/generic/atoms/Title'
 import { mdiChevronRight } from '@mdi/js'
 import Icon from '@mdi/react'
@@ -17,7 +17,7 @@ const HomeBlogSmallGalleryCard = ({
       <HomeBlogBackgroundImageShadow imageSrc={imageSrc} />
 
       <div className="flex flex-col h-full">
-        <ButtonColor variant="orange">{buttonNewsCategory}</ButtonColor>
+        <CategoryCard variant="orange">{buttonNewsCategory}</CategoryCard>
 
         <div className="mt-auto flex items-center">
           <Title className="line-clamp-2 text-neutral-70 flex-1 font-ZonaPro text-2xl font-semibold">

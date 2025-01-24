@@ -1,13 +1,13 @@
-import { IEbookCard } from '@/components/generic/organisms/EbookCard/EbookCard.interface'
+import { IHomeMainEbookCard } from '@/components/main/organisms/HomeMain/HomeMainEbookCard/HomeMainEbookCard.interface'
 
-const all: IEbookCard[] = [
+const all: IHomeMainEbookCard[] = [
   {
     title:
       'Data OLX Autos traz perspectivas do setor automotivo no encerramento do ano',
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange',
+    variant: 'orange-light',
   },
   {
     title:
@@ -15,7 +15,7 @@ const all: IEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange',
+    variant: 'orange-light',
   },
   {
     title:
@@ -31,7 +31,7 @@ const all: IEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange',
+    variant: 'orange-light',
   },
   {
     title:
@@ -43,14 +43,14 @@ const all: IEbookCard[] = [
   },
 ]
 
-const immobile: IEbookCard[] = [
+const immobile: IHomeMainEbookCard[] = [
   {
     title:
       'Data OLX Autos traz perspectivas do setor automotivo no encerramento do ano',
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange',
+    variant: 'orange-light',
   },
   {
     title:
@@ -58,7 +58,7 @@ const immobile: IEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange',
+    variant: 'orange-light',
   },
   {
     title:
@@ -66,7 +66,7 @@ const immobile: IEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange',
+    variant: 'orange-light',
   },
   {
     title:
@@ -74,11 +74,11 @@ const immobile: IEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange',
+    variant: 'orange-light',
   },
 ]
 
-const autos: IEbookCard[] = [
+const autos: IHomeMainEbookCard[] = [
   {
     title:
       'Data OLX Autos traz perspectivas do setor automotivo no encerramento do ano',
@@ -89,7 +89,7 @@ const autos: IEbookCard[] = [
   },
 ]
 
-export const homeMainOnTopNewsEbookTabination: IEbookCard[][] = [
+export const homeMainOnTopNewsEbookTabination: IHomeMainEbookCard[][] = [
   all,
   immobile,
   autos,

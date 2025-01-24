@@ -13,7 +13,11 @@ import './styles.css'
 
 const Swiper = dynamic(async () => (await import('swiper/react')).Swiper, {
   ssr: false,
-  loading: () => <LoadingContainer wrapperElementClassName="h-[15.625rem]" />,
+  loading: () => (
+    <LoadingContainer
+      wrapperElementClassName={twMerge('h-[24.75rem]', 'lg:h-[45rem]')}
+    />
+  ),
 })
 
 const HomeMainSlide = (): JSX.Element => {

@@ -48,6 +48,7 @@ export default {
         },
         placeholder: 'var(--placeholder)',
         orange: {
+          60: 'var(--orange-60)',
           70: 'var(--orange-70)',
           90: 'var(--orange-90)',
           100: 'var(--orange-100)',

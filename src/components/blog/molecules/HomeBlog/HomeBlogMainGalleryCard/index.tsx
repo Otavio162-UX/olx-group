@@ -1,5 +1,5 @@
 import { Button } from '@/components/generic/atoms/Button'
-import { ButtonColor } from '@/components/generic/atoms/ButtonColor'
+import { CategoryCard } from '@/components/generic/atoms/CategoryCard'
 import { Text } from '@/components/generic/atoms/Text'
 import { Title } from '@/components/generic/atoms/Title'
 import { mdiArrowRight } from '@mdi/js'
@@ -34,7 +34,7 @@ const HomeBlogMainGalleryCard = ({
         >
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
-              <ButtonColor variant="orange">{buttonNewsCategory}</ButtonColor>
+              <CategoryCard variant="orange">{buttonNewsCategory}</CategoryCard>
               <Title tag="h6" className="font-semibold text-sm text-neutral-70">
                 {readTime}
               </Title>

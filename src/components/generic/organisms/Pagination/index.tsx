@@ -20,10 +20,7 @@ const Pagination = ({
 
   return (
     <div
-      className={twMerge(
-        'mx-auto mt-12 w-max flex items-center gap-2',
-        'lg:gap-6'
-      )}
+      className={twMerge('mx-auto w-max flex items-center gap-2', 'lg:gap-6')}
     >
       <div className="flex items-center gap-2">
         {currentPage > 3 && (
