@@ -3,12 +3,13 @@ import { ColorfulEmptyCircle } from '@/components/generic/atoms/ColorfulEmptyCir
 import { ImageComponent } from '@/components/generic/atoms/ImageComponent'
 import { Text } from '@/components/generic/atoms/Text'
 import { Title } from '@/components/generic/atoms/Title'
+import { InternalRoutes } from '@/routes/routes'
+import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
 import { IHomeMainNewsCard } from './HomeMainNewsCard.interface'
 
 const HomeMainNewsCard = ({
   imageSrc,
-  imageClassName,
   buttonTitle,
   newsTitle,
   newsDescription,
@@ -16,6 +17,7 @@ const HomeMainNewsCard = ({
   date,
   readTime,
   variant,
+  id,
 }: IHomeMainNewsCard): JSX.Element => {
   return (
     <div className="w-full flex flex-col gap-6">
@@ -24,19 +26,21 @@ const HomeMainNewsCard = ({
         alt="news-image"
         width={308}
         height={160}
-        className={twMerge('object-cover w-full rounded-lg', imageClassName)}
+        className={twMerge('object-cover w-full rounded-lg h-[10rem]')}
       />
 
       <div className="w-full flex flex-col gap-2">
         <CategoryCard variant={variant}>{buttonTitle}</CategoryCard>
 
-        <Title
-          tag="h4"
-          className="font-ZonaPro font-semibold text-2xl text-neutral-130 line-clamp-2"
-          title={newsTitle}
-        >
-          {newsTitle}
-        </Title>
+        <Link href={InternalRoutes.BLOG_POST(variant, id)}>
+          <Title
+            tag="h4"
+            className="font-ZonaPro font-semibold text-2xl text-neutral-130 line-clamp-2"
+            title={newsTitle}
+          >
+            {newsTitle}
+          </Title>
+        </Link>
 
         <Text
           tag="p"

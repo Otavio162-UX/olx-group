@@ -34,6 +34,12 @@
   --green-70: #c0f2a9;
   --green-90: #4bd60a;
 
+  --orange-60: #ffece1;
+  --orange-70: #ffdb9a;
+  --orange-90: #fa8c4d;
+  --orange-100: #ff5e00;
+  --orange-110: #ff5000;
+
   --slide-inactive-ball: #9d96a7;
   --neutral-light: #aaaaaa;
 
@@ -50,14 +56,20 @@
 
   --placeholder: #8994a9;
 
-  --orange-60: #ffece1;
-  --orange-70: #ffdb9a;
-  --orange-90: #fa8c4d;
-  --orange-100: #ff5e00;
-  --orange-110: #ff5000;
-
   --danger-100: #e22828;
 
   --error-background-color: #fff5f5;
   --error-border-color: #e22828;
+}
+
+.autos {
+  --theme-blog-color-70: #c0f2a9;
+  --theme-blog-color-90: #8ce563;
+  --theme-blog-color-100: #4bd60a;
+}
+
+.immobile {
+  --theme-blog-color-70: #ffdb9a;
+  --theme-blog-color-90: #fa8c4d;
+  --theme-blog-color-100: #ff5e00;
 }

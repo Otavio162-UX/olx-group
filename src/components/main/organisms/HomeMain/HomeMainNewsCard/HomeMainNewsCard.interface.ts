@@ -1,13 +1,13 @@
-import { TCategoryVariants } from '@/components/generic/atoms/CategoryCard/CategoryCard.interface'
+import { TBlogVariants } from '@/types/global'
 
 export interface IHomeMainNewsCard {
   imageSrc: string
-  imageClassName: string
-  variant: TCategoryVariants
+  variant: TBlogVariants
   buttonTitle: string
   newsTitle: string
   newsDescription: string
   timeOlx: string
   date: string
   readTime: string
+  id: string | number
 }

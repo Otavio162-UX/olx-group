@@ -1,3 +1,6 @@
+import { BlogCategoryType } from '@/enum/categoriesType'
+import { TBlogVariants } from '@/types/global'
+
 export const InternalRoutes = {
   HOME: '/',
   MEDIA: '/media',
@@ -13,15 +16,16 @@ export const InternalRoutes = {
   BLOG: '/blog',
   BLOG_AUTOS: '/blog/autos',
   BLOG_IMMOBILE: '/blog/immobile',
-  BLOG_MANAGEMENT_AND_RELATIONSHIP: '/blog/managementAndRelationship',
-  BLOG_IN_PRACTICE: '/blog/inPractice',
-  BLOG_MARKETING_AND_SALES: '/blog/marketingAndSales',
-  BLOG_TRENDS: '/blog/trends',
-  BLOG_CAREERS: '/blog/careers',
-  BLOG_EVENTS: '/blog/events',
-  BLOG_MARKET: '/blog/market',
-  BLOG_TECHNOLOGY_AND_INNOVATION: '/blog/technologyAndInnovation',
-  BLOG_MORE_READ: '/blog/moreRead',
+
+  // blog generic routes
+  BLOG_POST: (blogType: TBlogVariants, postId: string | number): string =>
+    `/blog/${blogType}/post/${postId}`,
+  BLOG_CATEGORY_TYPE: (
+    blogType: TBlogVariants,
+    categoryType: BlogCategoryType
+  ): string => `/blog/${blogType}/categories/${categoryType}`,
+  BLOG_MORE_READ: (blogType: TBlogVariants): string =>
+    `/blog/${blogType}/moreRead`,
 }
 
 export const ExternalRoutes = {
@@ -31,4 +35,7 @@ export const ExternalRoutes = {
   FACEBOOK: 'https://www.facebook.com/olxbrasil',
   YOUTUBE: 'https://www.youtube.com/user/OLXBrasil',
   TIKTOK: 'https://www.tiktok.com/@olx_brasil',
+  'OLX_E-COMMERCE': 'https://www.olx.com.br/',
+  ZAP_SITE: 'https://www.zapimoveis.com.br/',
+  VIVA_REAL_SITE: 'https://www.vivareal.com.br/',
 }

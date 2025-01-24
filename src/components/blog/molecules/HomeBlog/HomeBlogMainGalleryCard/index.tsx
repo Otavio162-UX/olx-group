@@ -34,7 +34,9 @@ const HomeBlogMainGalleryCard = ({
         >
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
-              <CategoryCard variant="orange">{buttonNewsCategory}</CategoryCard>
+              <CategoryCard variant="immobile">
+                {buttonNewsCategory}
+              </CategoryCard>
               <Title tag="h6" className="font-semibold text-sm text-neutral-70">
                 {readTime}
               </Title>

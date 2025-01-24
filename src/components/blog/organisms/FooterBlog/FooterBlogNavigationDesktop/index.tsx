@@ -1,10 +1,14 @@
+'use client'
+
 import { FooterBlogTitle } from '@/components/blog/atoms/FooterBlog/FooterBlogTitle'
 import { FooterBlogSubTitleNavigation } from '@/components/blog/molecules/FooterBlog/FooterBlogSubTitleNavigation'
-import { footerBlogNavigation } from '@/components/blog/templates/FooterBlog/arrays/footerBlogNavigation'
+import { useGetBlogFooterCategoryNavigation } from '@/components/blog/templates/FooterBlog/hooks/useGetBlogFooterCategoryNavigation'
 import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
 
 const FooterBlogNavigationDesktop = (): JSX.Element => {
+  const footerBlogNavigation = useGetBlogFooterCategoryNavigation()
+
   return (
     <div className={twMerge('hidden', 'lg:flex lg:gap-12')}>
       {footerBlogNavigation.map((item, indexItem) => (

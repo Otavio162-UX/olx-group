@@ -1,14 +1,10 @@
-import { TObjectVariant } from '@/types/global'
+import { TBlogVariants, TObjectVariant } from '@/types/global'
 import { twMerge } from 'tailwind-merge'
-import {
-  TCategoryTypeVersion,
-  TCategoryVariants,
-} from '../CategoryCard.interface'
+import { TCategoryTypeVersion } from '../CategoryCard.interface'
 
-const classNameVariants: TObjectVariant<TCategoryVariants> = {
-  orange: 'bg-orange-70',
-  'orange-light': 'bg-orange-60',
-  green: 'bg-green-70',
+const classNameVariants: TObjectVariant<TBlogVariants> = {
+  immobile: 'bg-orange-70',
+  autos: 'bg-green-70',
 }
 
 const versionType: TObjectVariant<TCategoryTypeVersion> = {

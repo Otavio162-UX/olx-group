@@ -1,5 +1,5 @@
-import { TCategoryVariants } from '@/components/generic/atoms/CategoryCard/CategoryCard.interface'
+import { TBlogVariants } from '@/types/global'
 
 export interface IColorfulEmptyCircle {
-  variant: TCategoryVariants
+  variant: TBlogVariants
 }

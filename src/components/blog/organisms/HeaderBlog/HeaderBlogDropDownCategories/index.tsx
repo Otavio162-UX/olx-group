@@ -1,14 +1,18 @@
+'use client'
+
 import { Title } from '@/components/generic/atoms/Title'
-import { blogCategoriesNavigation } from '@/variables'
+import { useGetBlogCategoryNavigation } from '@/hooks/blog/useGetBlogCategoryNavigation'
 import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
 
 const HeaderBlogDropDownCategories = (): JSX.Element => {
+  const blogCategoriesNavigation = useGetBlogCategoryNavigation()
+
   return (
     <nav
       className={twMerge(
         'bg-neutral-70',
-        'lg:absolute lg:top-full lg:left-0 lg:z-20 lg:min-h-[19.0625rem] lg:py-6'
+        'lg:absolute lg:w-full lg:top-full lg:left-0 lg:z-20 lg:min-h-[19.0625rem] lg:py-6'
       )}
     >
       <div className="wrapperContainer max-w-container1328 flex flex-col gap-4">

@@ -1,4 +1,6 @@
-import { headerBlogMenu } from '@/components/blog/templates/HeaderBlog/arrays/headerBlogMenu'
+'use client'
+
+import { useGetHeaderBlogMenuProps } from '@/components/blog/templates/HeaderBlog/hooks/useGetHeaderBlogMenuProps'
 import { ButtonCollapsible } from '@/components/generic/molecules/ButtonCollapsible'
 import { SearchInput } from '@/components/generic/organisms/SearchInput'
 import { useState } from 'react'
@@ -6,6 +8,8 @@ import { twMerge } from 'tailwind-merge'
 
 const HeaderBlogDropDownMobile = () => {
   const [searchInput, setSearchInput] = useState('')
+
+  const headerBlogMenu = useGetHeaderBlogMenuProps()
 
   return (
     <nav

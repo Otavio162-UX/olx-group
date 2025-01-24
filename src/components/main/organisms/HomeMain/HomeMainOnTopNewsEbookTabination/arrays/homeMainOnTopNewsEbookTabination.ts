@@ -7,7 +7,7 @@ const all: IHomeMainEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange-light',
+    variant: 'immobile',
   },
   {
     title:
@@ -15,7 +15,7 @@ const all: IHomeMainEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange-light',
+    variant: 'immobile',
   },
   {
     title:
@@ -23,7 +23,7 @@ const all: IHomeMainEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'green',
+    variant: 'autos',
   },
   {
     title:
@@ -31,7 +31,7 @@ const all: IHomeMainEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange-light',
+    variant: 'immobile',
   },
   {
     title:
@@ -39,7 +39,7 @@ const all: IHomeMainEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'green',
+    variant: 'autos',
   },
 ]
 
@@ -50,7 +50,7 @@ const immobile: IHomeMainEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange-light',
+    variant: 'immobile',
   },
   {
     title:
@@ -58,7 +58,7 @@ const immobile: IHomeMainEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange-light',
+    variant: 'immobile',
   },
   {
     title:
@@ -66,7 +66,7 @@ const immobile: IHomeMainEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange-light',
+    variant: 'immobile',
   },
   {
     title:
@@ -74,7 +74,7 @@ const immobile: IHomeMainEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'orange-light',
+    variant: 'immobile',
   },
 ]
 
@@ -85,7 +85,7 @@ const autos: IHomeMainEbookCard[] = [
     buttonTitle: 'Imóveis',
     description: 'Descrição resumida do e-book',
     link: 'https://www.google.com',
-    variant: 'green',
+    variant: 'autos',
   },
 ]
 

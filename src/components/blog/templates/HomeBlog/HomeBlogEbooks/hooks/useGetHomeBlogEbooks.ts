@@ -9,7 +9,7 @@ const ebookA: IHomeBlogEbookCard = {
   buttonTitle: 'Imóveis',
   description: 'Descrição resumida do e-book',
   link: 'https://www.google.com',
-  variant: 'orange',
+  variant: 'immobile',
 }
 
 const ebookB: IHomeBlogEbookCard = {
@@ -19,7 +19,7 @@ const ebookB: IHomeBlogEbookCard = {
   description:
     'Descrição resumida do e-book irá aqui para mostrar algumas linhas',
   link: 'https://www.google.com',
-  variant: 'green',
+  variant: 'autos',
 }
 
 const allEbooks: Record<number, IHomeBlogEbookCard[]> = {

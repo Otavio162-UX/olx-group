@@ -2,13 +2,15 @@
 
 import { Button } from '@/components/generic/atoms/Button'
 import { ButtonScrollIndicator } from '@/components/generic/atoms/Tabination/TabinationButtonIndicator'
+import { useGetBlogCategoryNavigation } from '@/hooks/blog/useGetBlogCategoryNavigation'
 import { useInitCanScroll } from '@/hooks/useInitCanScroll'
-import { blogCategoriesNavigation } from '@/variables'
 import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
 
 const HomeBlogCategoryGroup = (): JSX.Element => {
   const { canScroll, scrollContainerRef } = useInitCanScroll()
+
+  const blogCategoriesNavigation = useGetBlogCategoryNavigation()
 
   return (
     <div className="relative border border-[#cccccc] rounded-2xl overflow-hidden">

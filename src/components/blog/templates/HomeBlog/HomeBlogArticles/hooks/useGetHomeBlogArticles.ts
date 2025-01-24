@@ -13,7 +13,7 @@ const articleA: IHomeBlogArticleCard = {
   timeOlx: 'Time OLX',
   date: '11 Jan 2022',
   readTime: 'Leitura de 5 min',
-  variant: 'orange',
+  variant: 'immobile',
 }
 
 const articleB: IHomeBlogArticleCard = {
@@ -25,7 +25,7 @@ const articleB: IHomeBlogArticleCard = {
   timeOlx: 'Time OLX',
   date: '11 Jan 2022',
   readTime: 'Leitura de 15 min',
-  variant: 'green',
+  variant: 'autos',
 }
 
 const allArticles: Record<number, IHomeBlogArticleCard[]> = {

@@ -1,30 +1,31 @@
+'use client'
+
 import { ImageComponent } from '@/components/generic/atoms/ImageComponent'
+import { useGetBlogType } from '@/hooks/blog/useGetBlogType'
 import { twMerge } from 'tailwind-merge'
+import { footerBlogLogoProps } from './variables/footerBlogLogo'
 
 const FooterBlogLogo = (): JSX.Element => {
+  const blogType = useGetBlogType()
+
+  const { logoProps } = footerBlogLogoProps
+
   return (
     <>
-      <ImageComponent
-        src="/blog/logos/logo-group.svg"
-        alt="olx-group-logo"
-        width={252}
-        height={24}
-        className={twMerge(
-          'w-[15.75rem] h-6 object-cover mx-auto',
-          'lg:hidden'
-        )}
-      />
+      <ImageComponent {...logoProps[blogType]} />
 
-      <ImageComponent
-        src="/blog/logos/logo-group-break.svg"
-        alt="olx-group-logo"
-        width={199}
-        height={112}
-        className={twMerge(
-          'hidden',
-          'lg:block lg:w-[12.4375rem] lg:h-[7rem] lg:object-cover'
-        )}
-      />
+      {blogType === 'immobile' && (
+        <ImageComponent
+          src="/blog/logos/immobileLogoGroupBreak.svg"
+          alt="olx-group-logo"
+          width={199}
+          height={112}
+          className={twMerge(
+            'hidden',
+            'lg:block lg:w-[12.4375rem] lg:h-[7rem] lg:object-cover'
+          )}
+        />
+      )}
     </>
   )
 }

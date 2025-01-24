@@ -1,6 +1,6 @@
 'use client'
 
-import { headerBlogMenu } from '@/components/blog/templates/HeaderBlog/arrays/headerBlogMenu'
+import { useGetHeaderBlogMenuProps } from '@/components/blog/templates/HeaderBlog/hooks/useGetHeaderBlogMenuProps'
 import { ButtonCollapsible } from '@/components/generic/molecules/ButtonCollapsible'
 import { SearchInput } from '@/components/generic/organisms/SearchInput'
 import { useState } from 'react'
@@ -8,6 +8,8 @@ import { twMerge } from 'tailwind-merge'
 
 const HeaderBlogDesktop = (): JSX.Element => {
   const [search, setSearch] = useState('')
+
+  const headerBlogMenu = useGetHeaderBlogMenuProps()
 
   return (
     <nav className={twMerge('hidden', 'lg:flex lg:items-center lg:gap-8')}>

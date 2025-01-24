@@ -1,9 +1,9 @@
-import { TCategoryVariants } from '@/components/generic/atoms/CategoryCard/CategoryCard.interface'
+import { TBlogVariants } from '@/types/global'
 
 export interface IHomeBlogEbookCard {
   title: string
   buttonTitle: string
   description: string
   link: string
-  variant: TCategoryVariants
+  variant: TBlogVariants
 }

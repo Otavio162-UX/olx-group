@@ -47,16 +47,16 @@ export default {
           130: 'var(--secondary-130)',
         },
         placeholder: 'var(--placeholder)',
+        green: {
+          70: 'var(--green-70)',
+          90: 'var(--green-90)',
+        },
         orange: {
           60: 'var(--orange-60)',
           70: 'var(--orange-70)',
           90: 'var(--orange-90)',
           100: 'var(--orange-100)',
           110: 'var(--orange-110)',
-        },
-        green: {
-          70: 'var(--green-70)',
-          90: 'var(--green-90)',
         },
         'slide-inactive-ball': 'var(--slide-inactive-ball)',
         neutral: {
@@ -76,6 +76,11 @@ export default {
         },
         'error-background-color': 'var(--error-background-color)',
         'error-border-color': 'var(--error-border-color)',
+        'theme-blog': {
+          70: 'var(--theme-blog-color-70)',
+          90: 'var(--theme-blog-color-90)',
+          100: 'var(--theme-blog-color-100)',
+        },
       },
       minWidth: {
         minContainer: '24.375rem',

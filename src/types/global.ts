@@ -19,3 +19,5 @@ export interface ICanScrollState {
   left: boolean
   right: boolean
 }
+
+export type TBlogVariants = 'immobile' | 'autos'
