@@ -8,10 +8,10 @@ import { twMerge } from 'tailwind-merge'
 const HomeBlogSubscribe = (): JSX.Element => {
   return (
     <section className="w-full py-12 bg-primary-100 overflow-hidden">
-      <div className="mx-auto max-w-container1920 relative">
+      <div className="mx-auto max-w-container1920 relative z-[1]">
         <div
           className={twMerge(
-            'wrapperContainer max-w-container1328 flex gap-20 z-[1]',
+            'wrapperContainer max-w-container1328 flex gap-20',
             'lg:items-center'
           )}
         >

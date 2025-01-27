@@ -7,9 +7,9 @@ import { useGetBlogType } from '@/hooks/blog/useGetBlogType'
 import { InternalRoutes } from '@/routes/routes'
 import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
-import { IHomeBlogArticleCard } from './HomeBlogArticleCard.interface'
+import { IBlogArticleCard } from './BlogArticleCard.interface'
 
-const HomeBlogArticleCard = ({
+const BlogArticleCard = ({
   imageSrc,
   buttonTitle,
   newsTitle,
@@ -18,7 +18,7 @@ const HomeBlogArticleCard = ({
   date,
   readTime,
   newsId,
-}: IHomeBlogArticleCard): JSX.Element => {
+}: IBlogArticleCard): JSX.Element => {
   const blogType = useGetBlogType()
 
   return (
@@ -85,4 +85,4 @@ const HomeBlogArticleCard = ({
   )
 }
 
-export { HomeBlogArticleCard }
+export { BlogArticleCard }

@@ -1,13 +1,17 @@
 import { Text } from '@/components/generic/atoms/Text'
 import { mdiCloseCircleOutline } from '@mdi/js'
 import Icon from '@mdi/react'
+import { twMerge } from 'tailwind-merge'
 import { IErrorMessage } from './ErrorMessage.interface'
 
-const ErrorMessage = ({ message }: IErrorMessage): JSX.Element | null => {
+const ErrorMessage = ({
+  wrapperElementClassName,
+  message,
+}: IErrorMessage): JSX.Element | null => {
   if (!message) return null
 
   return (
-    <div className="flex gap-1">
+    <div className={twMerge('flex gap-1', wrapperElementClassName)}>
       <Icon
         path={mdiCloseCircleOutline}
         size={'1rem'}

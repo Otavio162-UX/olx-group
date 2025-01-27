@@ -1,8 +1,10 @@
 'use client'
 
 import { IBlogArticleCard } from '@/components/blog/organisms/BlogArticleCard/BlogArticleCard.interface'
+import { searchBlogResultsContainerButtonsTab } from '@/components/blog/templates/SearchBlog/SearchBlogResultsContainer/arrays/searchBlogResultsContainerButtonsTabs'
 import { useGetBlogType } from '@/hooks/blog/useGetBlogType'
-import { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
 const articleA: IBlogArticleCard = {
   imageSrc:
@@ -34,7 +36,12 @@ const allArticles: Record<number, IBlogArticleCard[]> = {
   1: [...Array(6)].map(() => articleB),
 }
 
-interface IReturnUseGetHomeBlogArticles {
+interface IUseSearchBlogTab {
+  tabId: string
+  setSearchDataIsEmpty: Dispatch<SetStateAction<boolean>>
+}
+
+interface IReturnUseSearchBlogTab {
   page: number
   totalPages: number
   loading: boolean
@@ -42,12 +49,17 @@ interface IReturnUseGetHomeBlogArticles {
   articles: IBlogArticleCard[]
 }
 
-export const useGetHomeBlogArticles = (): IReturnUseGetHomeBlogArticles => {
+export const useSearchBlogTab = ({
+  tabId,
+  setSearchDataIsEmpty,
+}: IUseSearchBlogTab): IReturnUseSearchBlogTab => {
   const blogType = useGetBlogType()
+
+  const searchParams = useSearchParams().get('search')
 
   const [page, setPage] = useState(0)
   const [totalPages] = useState(2)
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   const [articles, setArticles] = useState(allArticles[0])
 
@@ -55,13 +67,30 @@ export const useGetHomeBlogArticles = (): IReturnUseGetHomeBlogArticles => {
     setLoading(true)
 
     console.log(blogType)
+    console.log(tabId)
+    console.log(searchParams)
 
-    setTimeout(() => {
-      setPage(newPage)
-      setArticles(allArticles[newPage])
-      setLoading(false)
-    }, 1000)
+    const dataIsEmpty =
+      tabId === searchBlogResultsContainerButtonsTab[0].id &&
+      allArticles[newPage].length === 0
+
+    if (dataIsEmpty) {
+      setTimeout(() => {
+        setSearchDataIsEmpty(true)
+        setLoading(false)
+      }, 1000)
+    } else {
+      setTimeout(() => {
+        setPage(newPage)
+        setArticles(allArticles[newPage])
+        setLoading(false)
+      }, 1000)
+    }
   }
+
+  useEffect(() => {
+    changePage(0)
+  }, [])
 
   return {
     page,

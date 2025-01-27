@@ -13,4 +13,7 @@ export interface ITabination {
   RightComponent?: JSX.Element
   children: JSX.Element | JSX.Element[]
   buttonsTab: IButtonTabProps[]
+  variantActive?: 'activeBlog' | 'active'
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  resetStateOnChange?: any
 }

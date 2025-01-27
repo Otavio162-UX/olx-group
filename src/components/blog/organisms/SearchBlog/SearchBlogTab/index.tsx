@@ -1,20 +1,23 @@
 'use client'
 
-import { HomeBlogTitleGroup } from '@/components/blog/molecules/HomeBlog/HomeBlogTitleGroup'
 import { BlogArticleCard } from '@/components/blog/organisms/BlogArticleCard'
 import { LoadingContainer } from '@/components/generic/molecules/LoadingContainer'
 import { Pagination } from '@/components/generic/organisms/Pagination'
 import { twMerge } from 'tailwind-merge'
-import { useGetHomeBlogArticles } from './hooks/useGetHomeBlogArticles'
+import { useSearchBlogTab } from './hooks/useSearchBlogTab'
+import { ISearchBlogTab } from './SearchBlogTab.interface'
 
-const HomeBlogArticles = (): JSX.Element => {
-  const { page, totalPages, loading, changePage, articles } =
-    useGetHomeBlogArticles()
+const SearchBlogTab = ({
+  tabId,
+  setSearchDataIsEmpty,
+}: ISearchBlogTab): JSX.Element => {
+  const { articles, changePage, loading, page, totalPages } = useSearchBlogTab({
+    tabId,
+    setSearchDataIsEmpty,
+  })
 
   return (
-    <section className={twMerge('pb-10 flex flex-col gap-10', 'lg:pt-10')}>
-      <HomeBlogTitleGroup textHighlight="Destaque" title="Artigos" />
-
+    <section className="flex flex-col gap-8 mt-8">
       {loading ? (
         <LoadingContainer
           wrapperElementClassName={twMerge('h-[40.8125rem]', 'lg:h-[71rem]')}
@@ -47,4 +50,4 @@ const HomeBlogArticles = (): JSX.Element => {
   )
 }
 
-export { HomeBlogArticles }
+export { SearchBlogTab }

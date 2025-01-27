@@ -84,6 +84,7 @@ export default {
           'secondary-color-60': 'var(--theme-blog-secondary-color-60)',
           'secondary-color-100': 'var(--theme-blog-secondary-color-100)',
           'secondary-color-110': 'var(--theme-blog-secondary-color-110)',
+          'secondary-color-140': 'var(--theme-blog-secondary-color-140)',
           'subscribe-circle-color': 'var(--theme-blog-subscribe-circle-color)',
         },
       },
@@ -93,7 +94,7 @@ export default {
     },
   },
   plugins: [
-    function ({ addComponents }: PluginAPI) {
+    function ({ addComponents, addVariant }: PluginAPI) {
       addComponents({
         '.wrapperContainer': {
           margin: '0 auto',
@@ -117,6 +118,8 @@ export default {
           },
         },
       })
+
+      addVariant('nth-last-child-2', '&:nth-last-child(2)')
     },
   ],
 } satisfies Config

@@ -10,7 +10,7 @@ const HomeBlogSubscribeShapes = (): JSX.Element => {
         alt="subscribe-shape"
         width={340}
         height={973}
-        className="w-[21.25rem] h-[60.8125rem] absolute -top-[7%] -left-[6.875rem]"
+        className="w-[21.25rem] h-[60.8125rem] -z-[1] absolute -top-[7%] -left-[6.875rem]"
       />
 
       <HomeBlogSubscribeCircleImage />

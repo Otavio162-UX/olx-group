@@ -1,6 +1,6 @@
 import { MouseEventHandler, ReactNode } from 'react'
 
-export type TTabinationButtonVariants = 'active' | 'inactive'
+export type TTabinationButtonVariants = 'active' | 'inactive' | 'activeBlog'
 
 export interface ITabinationButton {
   variant?: TTabinationButtonVariants

@@ -3,11 +3,11 @@
 import { useGetHeaderBlogMenuProps } from '@/components/blog/templates/HeaderBlog/hooks/useGetHeaderBlogMenuProps'
 import { ButtonCollapsible } from '@/components/generic/molecules/ButtonCollapsible'
 import { SearchInput } from '@/components/generic/organisms/SearchInput'
-import { useState } from 'react'
+import { useSearchBlog } from '@/hooks/blog/useSearchBlog'
 import { twMerge } from 'tailwind-merge'
 
 const HeaderBlogDropDownMobile = () => {
-  const [searchInput, setSearchInput] = useState('')
+  const { search, setSearch, handleSearch } = useSearchBlog()
 
   const headerBlogMenu = useGetHeaderBlogMenuProps()
 
@@ -20,9 +20,11 @@ const HeaderBlogDropDownMobile = () => {
       <div className="wrapperContainer max-w-container1328 flex flex-col gap-4">
         <div className="flex flex-col gap-8">
           <SearchInput
-            value={searchInput}
-            onChange={({ target }) => setSearchInput(target.value)}
-            onClick={() => console.log(searchInput)}
+            value={search}
+            onChange={({ target }) => setSearch(target.value)}
+            onClick={handleSearch}
+            minLength={1}
+            maxLength={100}
           />
 
           <div>

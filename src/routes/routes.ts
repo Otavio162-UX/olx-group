@@ -26,6 +26,11 @@ export const InternalRoutes = {
   ): string => `/blog/${blogType}/categories/${categoryType}`,
   BLOG_MORE_READ: (blogType: TBlogVariants): string =>
     `/blog/${blogType}/moreRead`,
+  BLOG_SEARCH: (blogType: TBlogVariants, search?: string): string =>
+    `/blog/${blogType}/search${search ? `?${search}` : ''}`,
+
+  // privacy policy
+  PRIVACY_POLICY: '/privacy-policy',
 }
 
 export const ExternalRoutes = {

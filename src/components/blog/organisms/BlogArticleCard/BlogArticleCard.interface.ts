@@ -1,4 +1,4 @@
-export interface IHomeBlogArticleCard {
+export interface IBlogArticleCard {
   imageSrc: string
   buttonTitle: string
   newsTitle: string

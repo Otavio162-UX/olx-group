@@ -19,7 +19,6 @@ const HomeBlogNewsGalleryMobile = ({
       <Swiper
         slidesPerView={1}
         spaceBetween={20}
-        loop
         pagination={{
           clickable: true,
         }}
