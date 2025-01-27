@@ -2,6 +2,7 @@ import { Button } from '@/components/generic/atoms/Button'
 import { CategoryCard } from '@/components/generic/atoms/CategoryCard'
 import { Text } from '@/components/generic/atoms/Text'
 import { Title } from '@/components/generic/atoms/Title'
+import { useGetBlogType } from '@/hooks/blog/useGetBlogType'
 import { mdiHuman } from '@mdi/js'
 import Icon from '@mdi/react'
 import Link from 'next/link'
@@ -13,12 +14,16 @@ const HomeBlogEbookCard = ({
   buttonTitle,
   description,
   link,
-  variant,
+  ebookId,
 }: IHomeBlogEbookCard): JSX.Element => {
+  const blogType = useGetBlogType()
+
+  console.log(ebookId)
+
   return (
     <div className="w-full rounded-3xl shadow-[0px_6px_10px_#00000016] p-6 flex flex-col gap-2 border border-neutral-60">
       <CategoryCard
-        variant={variant}
+        variant={blogType}
         className={twMerge('px-1.5 py-1 text-xs font-NunitoSans')}
       >
         {buttonTitle}

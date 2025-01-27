@@ -3,8 +3,13 @@ import { HomeBlogNewsGallery } from '@/components/blog/organisms/HomeBlog/HomeBl
 import { Text } from '@/components/generic/atoms/Text'
 import { Title } from '@/components/generic/atoms/Title'
 import { twMerge } from 'tailwind-merge'
+import { IHomeBlogLastNews } from './HomeBlogLastNews.interface'
 
-const HomeBlogLastNews = (): JSX.Element => {
+const HomeBlogLastNews = ({
+  title,
+  subtitle,
+  homeBlogNewsGallery,
+}: IHomeBlogLastNews): JSX.Element => {
   return (
     <section
       className={twMerge(
@@ -20,7 +25,7 @@ const HomeBlogLastNews = (): JSX.Element => {
           'xl:text-[4rem] xl:leading-[1.12]'
         )}
       >
-        As últimas notícias do mercado imobiliário
+        {title}
       </Title>
 
       <Text
@@ -30,12 +35,12 @@ const HomeBlogLastNews = (): JSX.Element => {
           'lg:text-2xl'
         )}
       >
-        Fique por dentro das novidades do mundo imobiliário.
+        {subtitle}
       </Text>
 
       <HomeBlogCategoryGroup />
 
-      <HomeBlogNewsGallery />
+      <HomeBlogNewsGallery homeBlogNewsGallery={homeBlogNewsGallery} />
     </section>
   )
 }

@@ -1,6 +1,6 @@
+import { HomeBlogSubscribeImage } from '@/components/blog/atoms/HomeBlog/HomeBlogSubscribeImage'
 import { HomeBlogSubscribeShapes } from '@/components/blog/molecules/HomeBlog/HomeBlogSubscribeShapes'
 import { HomeBlogSubscribeForm } from '@/components/blog/organisms/HomeBlog/HomeBlogSubscribeForm'
-import { ImageComponent } from '@/components/generic/atoms/ImageComponent'
 import { Text } from '@/components/generic/atoms/Text'
 import { Title } from '@/components/generic/atoms/Title'
 import { twMerge } from 'tailwind-merge'
@@ -49,17 +49,7 @@ const HomeBlogSubscribe = (): JSX.Element => {
             <HomeBlogSubscribeForm />
           </div>
 
-          <ImageComponent
-            src="/blog/home/house.svg"
-            alt="house-image"
-            width={640}
-            height={640}
-            className={twMerge(
-              'hidden',
-              'lg:flex lg:w-[28rem] lg:h-[28rem]',
-              'xl:w-[40rem] xl:lg:h-[40] z-10'
-            )}
-          />
+          <HomeBlogSubscribeImage />
         </div>
 
         <HomeBlogSubscribeShapes />

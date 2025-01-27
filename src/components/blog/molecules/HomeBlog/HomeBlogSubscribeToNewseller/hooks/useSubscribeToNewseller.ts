@@ -1,10 +1,23 @@
 'use client'
 
-import { FormEvent, useState } from 'react'
+import { useGetBlogType } from '@/hooks/blog/useGetBlogType'
+import { TBlogVariants } from '@/types/global'
+import { Dispatch, FormEvent, SetStateAction, useState } from 'react'
 import { z } from 'zod'
 import { homeBlogSubscribeToNewsellerSchema } from '../schema/homeBlogSubscribeToNewsellerSchema'
 
-export const useSubscribeToNewseller = () => {
+interface IReturnUseSubscribeToNewseller {
+  handleSubmit: (event: FormEvent<HTMLFormElement>) => void
+  email: string
+  setEmail: Dispatch<SetStateAction<string>>
+  error: string | null
+  loading: boolean
+  blogType: TBlogVariants
+}
+
+export const useSubscribeToNewseller = (): IReturnUseSubscribeToNewseller => {
+  const blogType = useGetBlogType()
+
   const [email, setEmail] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
@@ -24,5 +37,5 @@ export const useSubscribeToNewseller = () => {
     }
   }
 
-  return { handleSubmit, email, setEmail, error, loading }
+  return { handleSubmit, email, setEmail, error, loading, blogType }
 }

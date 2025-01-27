@@ -1,6 +1,7 @@
 'use client'
 
 import { IHomeBlogEbookCard } from '@/components/blog/organisms/HomeBlog/HomeBlogEbookCard/HomeBlogEbookCard.interface'
+import { useGetBlogType } from '@/hooks/blog/useGetBlogType'
 import { useState } from 'react'
 
 const ebookA: IHomeBlogEbookCard = {
@@ -9,7 +10,7 @@ const ebookA: IHomeBlogEbookCard = {
   buttonTitle: 'Imóveis',
   description: 'Descrição resumida do e-book',
   link: 'https://www.google.com',
-  variant: 'immobile',
+  ebookId: 'ebook-1',
 }
 
 const ebookB: IHomeBlogEbookCard = {
@@ -19,7 +20,7 @@ const ebookB: IHomeBlogEbookCard = {
   description:
     'Descrição resumida do e-book irá aqui para mostrar algumas linhas',
   link: 'https://www.google.com',
-  variant: 'autos',
+  ebookId: 'ebook-2',
 }
 
 const allEbooks: Record<number, IHomeBlogEbookCard[]> = {
@@ -36,6 +37,8 @@ interface IReturnUseGetHomeBlogEbooks {
 }
 
 export const useGetHomeBlogEbooks = (): IReturnUseGetHomeBlogEbooks => {
+  const blogType = useGetBlogType()
+
   const [page, setPage] = useState(0)
   const [totalPages] = useState(2)
   const [loading, setLoading] = useState(false)
@@ -44,6 +47,8 @@ export const useGetHomeBlogEbooks = (): IReturnUseGetHomeBlogEbooks => {
 
   const changePage = (newPage: number) => {
     setLoading(true)
+
+    console.log(blogType)
 
     setTimeout(() => {
       setPage(newPage)

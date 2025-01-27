@@ -1,5 +1,7 @@
 'use client'
 
+import { useGetBlogType } from '@/hooks/blog/useGetBlogType'
+import { TBlogVariants } from '@/types/global'
 import { FormEvent, useState } from 'react'
 import { z } from 'zod'
 import { homeBlogSubscribeFormSchema } from '../schema/homeBlogSubscribeFormSchema'
@@ -10,9 +12,12 @@ interface IReturnUseHomeBlogSubscribeForm {
   setEmail: (value: string) => void
   error: string | null
   loading: boolean
+  blogType: TBlogVariants
 }
 
 export const useHomeBlogSubscribeForm = (): IReturnUseHomeBlogSubscribeForm => {
+  const blogType = useGetBlogType()
+
   const [email, setEmail] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
@@ -32,5 +37,5 @@ export const useHomeBlogSubscribeForm = (): IReturnUseHomeBlogSubscribeForm => {
     }
   }
 
-  return { handleSubmit, email, setEmail, error, loading }
+  return { handleSubmit, email, setEmail, error, loading, blogType }
 }

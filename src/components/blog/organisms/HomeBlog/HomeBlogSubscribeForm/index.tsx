@@ -4,14 +4,15 @@ import { Button } from '@/components/generic/atoms/Button'
 import { Input } from '@/components/generic/atoms/Input'
 import { Text } from '@/components/generic/atoms/Text'
 import { ErrorMessage } from '@/components/generic/molecules/ErrorMessage'
+import { twMerge } from 'tailwind-merge'
 import { useHomeBlogSubscribeForm } from './hooks/useHomeBlogSubscribeForm'
 
 const HomeBlogSubscribeForm = (): JSX.Element => {
-  const { email, error, setEmail, handleSubmit, loading } =
+  const { email, error, setEmail, handleSubmit, loading, blogType } =
     useHomeBlogSubscribeForm()
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-6">
+    <form onSubmit={handleSubmit} className={twMerge(blogType, 'flex gap-6')}>
       <div className="flex flex-col gap-2 max-w-[15.625rem]">
         <div>
           <Input
@@ -32,7 +33,7 @@ const HomeBlogSubscribeForm = (): JSX.Element => {
 
       <Button
         size="medium"
-        className="bg-orange-100 hover:bg-orange-110 py-3 px-6 active:bg-orange-110 h-max rounded-lg border-0 w-[7.1875rem]"
+        className="bg-theme-blog-color-100 hover:bg-theme-blog-color-110 py-3 px-6 active:bg-orange-110 h-max rounded-lg border-0 w-[7.1875rem]"
         type="submit"
         loading={loading}
       >

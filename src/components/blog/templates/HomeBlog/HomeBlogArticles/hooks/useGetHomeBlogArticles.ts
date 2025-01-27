@@ -1,6 +1,7 @@
 'use client'
 
 import { IHomeBlogArticleCard } from '@/components/blog/organisms/HomeBlog/HomeBlogArticleCard/HomeBlogArticleCard.interface'
+import { useGetBlogType } from '@/hooks/blog/useGetBlogType'
 import { useState } from 'react'
 
 const articleA: IHomeBlogArticleCard = {
@@ -13,7 +14,7 @@ const articleA: IHomeBlogArticleCard = {
   timeOlx: 'Time OLX',
   date: '11 Jan 2022',
   readTime: 'Leitura de 5 min',
-  variant: 'immobile',
+  newsId: 'titulo-6',
 }
 
 const articleB: IHomeBlogArticleCard = {
@@ -25,7 +26,7 @@ const articleB: IHomeBlogArticleCard = {
   timeOlx: 'Time OLX',
   date: '11 Jan 2022',
   readTime: 'Leitura de 15 min',
-  variant: 'autos',
+  newsId: 'titulo-6',
 }
 
 const allArticles: Record<number, IHomeBlogArticleCard[]> = {
@@ -42,6 +43,8 @@ interface IReturnUseGetHomeBlogArticles {
 }
 
 export const useGetHomeBlogArticles = (): IReturnUseGetHomeBlogArticles => {
+  const blogType = useGetBlogType()
+
   const [page, setPage] = useState(0)
   const [totalPages] = useState(2)
   const [loading, setLoading] = useState(false)
@@ -50,6 +53,8 @@ export const useGetHomeBlogArticles = (): IReturnUseGetHomeBlogArticles => {
 
   const changePage = (newPage: number) => {
     setLoading(true)
+
+    console.log(blogType)
 
     setTimeout(() => {
       setPage(newPage)

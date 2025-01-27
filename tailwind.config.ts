@@ -77,9 +77,14 @@ export default {
         'error-background-color': 'var(--error-background-color)',
         'error-border-color': 'var(--error-border-color)',
         'theme-blog': {
-          70: 'var(--theme-blog-color-70)',
-          90: 'var(--theme-blog-color-90)',
-          100: 'var(--theme-blog-color-100)',
+          'color-70': 'var(--theme-blog-color-70)',
+          'color-90': 'var(--theme-blog-color-90)',
+          'color-100': 'var(--theme-blog-color-100)',
+          'color-110': 'var(--theme-blog-color-110)',
+          'secondary-color-60': 'var(--theme-blog-secondary-color-60)',
+          'secondary-color-100': 'var(--theme-blog-secondary-color-100)',
+          'secondary-color-110': 'var(--theme-blog-secondary-color-110)',
+          'subscribe-circle-color': 'var(--theme-blog-subscribe-circle-color)',
         },
       },
       minWidth: {

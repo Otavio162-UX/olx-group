@@ -1,7 +1,11 @@
+'use client'
+
 import { Button } from '@/components/generic/atoms/Button'
 import { CategoryCard } from '@/components/generic/atoms/CategoryCard'
 import { Text } from '@/components/generic/atoms/Text'
 import { Title } from '@/components/generic/atoms/Title'
+import { useGetBlogType } from '@/hooks/blog/useGetBlogType'
+import { InternalRoutes } from '@/routes/routes'
 import { mdiArrowRight } from '@mdi/js'
 import Icon from '@mdi/react'
 import Link from 'next/link'
@@ -10,16 +14,23 @@ import { HomeBlogBackgroundImageShadow } from '../HomeBlogBackgroundImageShadow'
 import { IHomeBlogMainGalleryCard } from './HomeBlogMainGalleryCard.interface'
 
 const HomeBlogMainGalleryCard = ({
-  link,
+  newsId,
   imageSrc,
   buttonNewsCategory,
   readTime,
   newsTitle,
   newsDescription,
 }: IHomeBlogMainGalleryCard): JSX.Element => {
+  const blogType = useGetBlogType()
+
   return (
-    <Link href={link}>
-      <div className="w-full rounded-2xl h-full overflow-hidden relative flex px-10 py-8">
+    <Link href={InternalRoutes.BLOG_POST(blogType, newsId)}>
+      <div
+        className={twMerge(
+          blogType,
+          'w-full rounded-2xl h-full overflow-hidden relative flex px-10 py-8'
+        )}
+      >
         <HomeBlogBackgroundImageShadow
           shadowElementClassName="to-[#00000032]"
           imageSrc={imageSrc}
@@ -34,7 +45,7 @@ const HomeBlogMainGalleryCard = ({
         >
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
-              <CategoryCard variant="immobile">
+              <CategoryCard variant={blogType}>
                 {buttonNewsCategory}
               </CategoryCard>
               <Title tag="h6" className="font-semibold text-sm text-neutral-70">
@@ -68,7 +79,7 @@ const HomeBlogMainGalleryCard = ({
             <Button
               size="large"
               className={twMerge(
-                'bg-orange-100 hover:bg-orange-110 active:bg-orange-110 flex items-center gap-2 h-max',
+                'hover:bg-theme-blog-secondary-color-110 active:bg-theme-blog-secondary-color-110 flex items-center gap-2 h-max bg-theme-blog-secondary-color-100',
                 'lg:px-4 lg:text-sm lg:gap-1',
                 'xl:text-base xl:px-6 xl:gap-2'
               )}

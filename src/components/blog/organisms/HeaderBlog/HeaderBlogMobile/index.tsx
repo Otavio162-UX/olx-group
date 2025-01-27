@@ -19,7 +19,7 @@ const HeaderBlogMobile = (): JSX.Element => {
     <div className={twMerge(blogType, 'block', 'lg:hidden')}>
       <Button
         variant="clean"
-        className="text-theme-blog-100 p-0"
+        className="text-theme-blog-color-100 p-0"
         onClick={toggleMobileMenu}
       >
         <Icon path={currentMenuIcon} size={1} />
