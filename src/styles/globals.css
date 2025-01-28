@@ -75,6 +75,8 @@
   --theme-blog-secondary-color-140: #3c4453;
 
   --theme-blog-subscribe-circle-color: #8ce563;
+
+  --theme-blog-search-empty-icon-color: #1d1d1d;
 }
 
 .immobile {
@@ -89,4 +91,6 @@
   --theme-blog-secondary-color-140: #7f573f;
 
   --theme-blog-subscribe-circle-color: #ff5e00;
+
+  --theme-blog-search-empty-icon-color: #fa8c4d;
 }

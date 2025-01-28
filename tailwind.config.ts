@@ -86,6 +86,8 @@ export default {
           'secondary-color-110': 'var(--theme-blog-secondary-color-110)',
           'secondary-color-140': 'var(--theme-blog-secondary-color-140)',
           'subscribe-circle-color': 'var(--theme-blog-subscribe-circle-color)',
+          'search-empty-icon-color':
+            'var(--theme-blog-search-empty-icon-color)',
         },
       },
       minWidth: {

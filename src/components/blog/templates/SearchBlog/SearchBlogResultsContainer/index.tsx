@@ -21,8 +21,6 @@ const SearchBlogResultsContainer = (): JSX.Element => {
     setSearchDataIsEmpty,
   } = useSearchBlogResultsContainer()
 
-  console.log(searchDataIsEmpty)
-
   return (
     <section
       className={twMerge(
@@ -54,24 +52,22 @@ const SearchBlogResultsContainer = (): JSX.Element => {
       />
 
       {!searchDataIsEmpty ? (
-        <div>
-          <Tabination
-            tabinationButtonsWrapperClassName={twMerge(
-              'lg:flex lg:justify-center'
-            )}
-            variantActive="activeBlog"
-            buttonsTab={searchBlogResultsContainerButtonsTab}
-            resetStateOnChange={searchParams}
-          >
-            {searchBlogResultsContainerButtonsTab.map((item, indexItem) => (
-              <SearchBlogTab
-                key={`search-tab-${indexItem}`}
-                tabId={item.id}
-                setSearchDataIsEmpty={setSearchDataIsEmpty}
-              />
-            ))}
-          </Tabination>
-        </div>
+        <Tabination
+          tabinationButtonsWrapperClassName={twMerge(
+            'lg:flex lg:justify-center'
+          )}
+          variantActive="activeBlog"
+          buttonsTab={searchBlogResultsContainerButtonsTab}
+          resetStateOnChange={searchParams}
+        >
+          {searchBlogResultsContainerButtonsTab.map((item, indexItem) => (
+            <SearchBlogTab
+              key={`search-tab-${indexItem}`}
+              tabId={item.id}
+              setSearchDataIsEmpty={setSearchDataIsEmpty}
+            />
+          ))}
+        </Tabination>
       ) : (
         <SearchBlogEmptyData />
       )}
