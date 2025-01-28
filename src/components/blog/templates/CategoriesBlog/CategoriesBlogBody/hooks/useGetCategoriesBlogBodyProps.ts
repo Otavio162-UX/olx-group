@@ -1,10 +1,11 @@
 'use client'
 
 import { IBlogArticleCard } from '@/components/blog/organisms/BlogArticleCard/BlogArticleCard.interface'
-import { searchBlogResultsCategoriesTab } from '@/components/blog/templates/SearchBlog/SearchBlogResultsContainer/arrays/searchBlogResultsCategoriesTab'
 import { useGetBlogType } from '@/hooks/blog/useGetBlogType'
-import { useSearchParams } from 'next/navigation'
-import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { TBlogVariants } from '@/types/global'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { convertLastPath } from '../functions/convertLastPath.'
 
 const articleA: IBlogArticleCard = {
   imageSrc:
@@ -36,67 +37,53 @@ const allArticles: Record<number, IBlogArticleCard[]> = {
   1: [...Array(6)].map(() => articleB),
 }
 
-interface IUseSearchBlogTab {
-  tabId: string
-  setSearchDataIsEmpty: Dispatch<SetStateAction<boolean>>
-}
-
-interface IReturnUseSearchBlogTab {
+interface IReturnUseGetCategoriesBlogBodyProps {
+  paths: string[]
   page: number
   totalPages: number
   loading: boolean
   changePage: (newPage: number) => void
   articles: IBlogArticleCard[]
+  blogType: TBlogVariants
 }
 
-export const useSearchBlogTab = ({
-  tabId,
-  setSearchDataIsEmpty,
-}: IUseSearchBlogTab): IReturnUseSearchBlogTab => {
-  const blogType = useGetBlogType()
+export const useGetCategoriesBlogBodyProps =
+  (): IReturnUseGetCategoriesBlogBodyProps => {
+    const pathname = usePathname()
 
-  const searchParams = useSearchParams().get('search')
+    const lastPathname = convertLastPath({ pathname })
 
-  const [page, setPage] = useState(0)
-  const [totalPages] = useState(2)
-  const [loading, setLoading] = useState(true)
+    const blogType = useGetBlogType()
 
-  const [articles, setArticles] = useState(allArticles[0])
+    const [page, setPage] = useState(0)
+    const [totalPages] = useState(2)
+    const [loading, setLoading] = useState(true)
 
-  const changePage = (newPage: number) => {
-    setLoading(true)
+    const [articles, setArticles] = useState<IBlogArticleCard[]>([])
 
-    console.log(blogType)
-    console.log(tabId)
-    console.log(searchParams)
+    const changePage = (newPage: number) => {
+      setLoading(true)
 
-    const dataIsEmpty =
-      tabId === searchBlogResultsCategoriesTab[0].id &&
-      allArticles[newPage].length === 0
+      console.log(blogType)
 
-    if (dataIsEmpty) {
-      setTimeout(() => {
-        setSearchDataIsEmpty(true)
-        setLoading(false)
-      }, 1000)
-    } else {
       setTimeout(() => {
         setPage(newPage)
         setArticles(allArticles[newPage])
         setLoading(false)
       }, 1000)
     }
-  }
 
-  useEffect(() => {
-    changePage(0)
-  }, [])
+    useEffect(() => {
+      changePage(0)
+    }, [])
 
-  return {
-    page,
-    totalPages,
-    loading,
-    changePage,
-    articles,
+    return {
+      paths: ['Blog', lastPathname],
+      articles,
+      changePage,
+      loading,
+      page,
+      totalPages,
+      blogType,
+    }
   }
-}

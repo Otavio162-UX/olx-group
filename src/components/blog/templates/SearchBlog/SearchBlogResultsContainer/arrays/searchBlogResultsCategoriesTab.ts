@@ -1,6 +1,6 @@
 import { IButtonTabProps } from '@/components/generic/organisms/Tabination/Tabination.interface'
 
-export const searchBlogResultsContainerButtonsTab: IButtonTabProps[] = [
+export const searchBlogResultsCategoriesTab: IButtonTabProps[] = [
   {
     id: 'all',
     children: 'Tudo',
