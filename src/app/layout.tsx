@@ -14,6 +14,12 @@ export const metadata: Metadata = {
 export default function LocaleLayout({ children }: TRootLayoutParams) {
   return (
     <html lang={'pt-BR'}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+      </head>
       <body
         className={twMerge(
           allFonts,

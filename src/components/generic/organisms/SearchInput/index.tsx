@@ -1,10 +1,11 @@
 import { Button } from '@/components/generic/atoms/Button'
+import { Input } from '@/components/generic/atoms/Input'
 import { Loading } from '@/components/generic/atoms/Loading'
+import { ErrorMessage } from '@/components/generic/molecules/ErrorMessage'
 import { mdiMagnify } from '@mdi/js'
 import Icon from '@mdi/react'
+import { KeyboardEvent } from 'react'
 import { twMerge } from 'tailwind-merge'
-import { Input } from '../../atoms/Input'
-import { ErrorMessage } from '../../molecules/ErrorMessage'
 import { ISearchInput } from './SearchInput.interface'
 import { searchInputProps } from './variables/searchInputProps'
 
@@ -19,16 +20,20 @@ const SearchInput = ({
   loading,
   disabled,
   variant,
+  minLength,
+  maxLength,
   errorMessage,
 }: ISearchInput): JSX.Element => {
   const isDisabled = disabled || loading
 
-  const showError = variant === 'error' && errorMessage
-
   const { classNameVariants } = searchInputProps
 
+  const onKeyup = (e: KeyboardEvent<HTMLInputElement>): void => {
+    if (e.key === 'Enter') onClick()
+  }
+
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 relative">
       <div
         className={twMerge(
           'w-full h-12 px-4 flex items-center border rounded-lg gap-2 transition-all',
@@ -57,8 +62,12 @@ const SearchInput = ({
           variant="clean"
           placeholder="Buscar"
           onChange={onChange}
+          value={value}
           className={inputClassName}
           disabled={isDisabled}
+          minLength={minLength}
+          maxLength={maxLength}
+          onKeyUp={onKeyup}
         />
 
         {loading && !disabled && (
@@ -72,7 +81,10 @@ const SearchInput = ({
         )}
       </div>
 
-      {showError && <ErrorMessage message={errorMessage} />}
+      <ErrorMessage
+        wrapperElementClassName="absolute top-full"
+        message={errorMessage}
+      />
     </div>
   )
 }

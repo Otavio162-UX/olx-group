@@ -12,7 +12,9 @@ export interface ISearchInput {
   onChange: ChangeEventHandler<HTMLInputElement>
   onClick: VoidFunction
   variant?: TSearchInputVariants
-  errorMessage?: string
+  errorMessage?: string | null
   loading?: boolean
   disabled?: boolean
+  minLength?: number
+  maxLength?: number
 }

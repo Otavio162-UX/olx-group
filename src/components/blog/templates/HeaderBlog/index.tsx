@@ -1,18 +1,20 @@
-import { ImageComponent } from '@/components/generic/atoms/ImageComponent'
-import { HeaderBlogDesktop } from '../../organisms/HeaderBlog/HeaderBlogDesktop'
+import { HeaderBlogLogo } from '@/components/blog/atoms/HeaderBlog/HeaderBlogLogo'
+import { HeaderBlogDesktop } from '@/components/blog/organisms/HeaderBlog/HeaderBlogDesktop'
+import { HeaderBlogMobile } from '@/components/blog/organisms/HeaderBlog/HeaderBlogMobile'
+import { twMerge } from 'tailwind-merge'
 
 const HeaderBlog = (): JSX.Element => {
   return (
-    <header className="wrapperContainer max-w-container1328 flex items-center justify-between h-[4.5rem]">
-      <ImageComponent
-        src="/blog/logos/logo-group.svg"
-        alt="olx-group-logo"
-        width={252}
-        height={24}
-        className="w-[15.75rem] h-6 object-cover"
-      />
+    <header className={twMerge('sticky top-0 z-10 bg-neutral-70', 'lg:static')}>
+      <div className="relative">
+        <nav className="wrapperContainer max-w-container1328 flex items-center justify-between h-[4.5rem]">
+          <HeaderBlogLogo />
 
-      <HeaderBlogDesktop />
+          <HeaderBlogDesktop />
+
+          <HeaderBlogMobile />
+        </nav>
+      </div>
     </header>
   )
 }

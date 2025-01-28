@@ -14,3 +14,10 @@ export type THeaderMenu = Pick<
   IButtonCollapsible,
   'link' | 'buttonTitle' | 'children' | 'iconProps'
 >
+
+export interface ICanScrollState {
+  left: boolean
+  right: boolean
+}
+
+export type TBlogVariants = 'immobile' | 'autos'

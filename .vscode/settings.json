@@ -10,5 +10,14 @@
     "source.sortImports": "always"
   },
   "tailwindCSS.experimental.classRegex": ["tw`([^`]*)", "tw\\.\\w+`([^`]*)"],
-  "cSpell.words": ["Altimus", "Imobi", "linkedin", "TIKTOK", "youtube"]
+  "cSpell.words": [
+    "Altimus",
+    "Imobi",
+    "linkedin",
+    "Newseller",
+    "nunito",
+    "Nunito",
+    "TIKTOK",
+    "youtube"
+  ]
 }

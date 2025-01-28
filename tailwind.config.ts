@@ -14,8 +14,11 @@ export default {
         ZonaPro: 'var(--font-ZonaPro)',
         Roboto: 'var(--font-Roboto)',
         Inter: 'var(--font-Inter)',
+        NunitoSans: 'var(--font-Nunito-Sans)',
       },
       maxWidth: {
+        container1920: '120rem',
+        container1376: '86rem',
         container1328: '83rem',
         container1056: '66rem',
       },
@@ -44,14 +47,26 @@ export default {
           130: 'var(--secondary-130)',
         },
         placeholder: 'var(--placeholder)',
-        orange: {
-          100: 'var(--orange-100)',
+        green: {
+          70: 'var(--green-70)',
+          90: 'var(--green-90)',
         },
+        orange: {
+          60: 'var(--orange-60)',
+          70: 'var(--orange-70)',
+          90: 'var(--orange-90)',
+          100: 'var(--orange-100)',
+          110: 'var(--orange-110)',
+        },
+        'slide-inactive-ball': 'var(--slide-inactive-ball)',
         neutral: {
+          light: 'var(--neutral-light)',
+          60: 'var(--neutral-60)',
           70: 'var(--neutral-70)',
           80: 'var(--neutral-80)',
           90: 'var(--neutral-90)',
           100: 'var(--neutral-100)',
+          110: 'var(--neutral-110)',
           120: 'var(--neutral-120)',
           130: 'var(--neutral-130)',
         },
@@ -61,6 +76,19 @@ export default {
         },
         'error-background-color': 'var(--error-background-color)',
         'error-border-color': 'var(--error-border-color)',
+        'theme-blog': {
+          'color-70': 'var(--theme-blog-color-70)',
+          'color-90': 'var(--theme-blog-color-90)',
+          'color-100': 'var(--theme-blog-color-100)',
+          'color-110': 'var(--theme-blog-color-110)',
+          'secondary-color-60': 'var(--theme-blog-secondary-color-60)',
+          'secondary-color-100': 'var(--theme-blog-secondary-color-100)',
+          'secondary-color-110': 'var(--theme-blog-secondary-color-110)',
+          'secondary-color-140': 'var(--theme-blog-secondary-color-140)',
+          'subscribe-circle-color': 'var(--theme-blog-subscribe-circle-color)',
+          'search-empty-icon-color':
+            'var(--theme-blog-search-empty-icon-color)',
+        },
       },
       minWidth: {
         minContainer: '24.375rem',
@@ -68,7 +96,7 @@ export default {
     },
   },
   plugins: [
-    function ({ addComponents }: PluginAPI) {
+    function ({ addComponents, addVariant }: PluginAPI) {
       addComponents({
         '.wrapperContainer': {
           margin: '0 auto',
@@ -92,6 +120,8 @@ export default {
           },
         },
       })
+
+      addVariant('nth-last-child-2', '&:nth-last-child(2)')
     },
   ],
 } satisfies Config

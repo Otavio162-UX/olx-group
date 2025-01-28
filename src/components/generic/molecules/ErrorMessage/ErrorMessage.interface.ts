@@ -1,3 +1,4 @@
 export interface IErrorMessage {
-  message: string
+  wrapperElementClassName?: string
+  message?: string | null
 }
