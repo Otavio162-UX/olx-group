@@ -5,6 +5,7 @@ import { allFonts } from '@/fonts'
 import { TRootLayoutParams } from '@/types/global'
 
 import '@/styles/globals.css'
+import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: 'Grupo OLX',
@@ -26,7 +27,7 @@ export default function LocaleLayout({ children }: TRootLayoutParams) {
           'flex flex-col min-h-screen antialiased w-full max-w-[100vw] min-w-minContainer'
         )}
       >
-        {children}
+        <Suspense>{children}</Suspense>
       </body>
     </html>
   )
