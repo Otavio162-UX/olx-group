@@ -1,0 +1,18 @@
+.swiper-pagination-bullet {
+  background-color: var(--theme-blog-secondary-color-60) !important;
+  opacity: 1 !important;
+  width: 0.75rem !important;
+  height: 0.75rem !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--theme-blog-secondary-color-100) !important;
+  opacity: 1 !important;
+  width: 1rem !important;
+  height: 1rem !important;
+  transform: translateY(0.125rem);
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 4px) !important;
+}

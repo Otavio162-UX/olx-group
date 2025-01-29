@@ -31,11 +31,78 @@
   --secondary-120: #467332;
   --secondary-130: #233919;
 
+  --green-70: #c0f2a9;
+  --green-90: #4bd60a;
+
+  --orange-60: #ffece1;
+  --orange-70: #ffdb9a;
+  --orange-90: #fa8c4d;
+  --orange-100: #ff5e00;
+  --orange-110: #ff5000;
+  --orange-140: #7f573f;
+
+  --slide-inactive-ball: #9d96a7;
+  --neutral-light: #aaaaaa;
+
+  --neutral-60: #f5f6f7;
   --neutral-70: #ffffff;
   --neutral-80: #5e6a82;
   --neutral-90: #cfd4dd;
   --neutral-100: #3c4453;
+  --neutral-110: #5e6a82;
+  --neutral-120: #1d1d1d;
   --neutral-130: #1a1d23;
 
+  --success-border-color: #24a148;
+
+  --placeholder: #8994a9;
+
   --danger-100: #e22828;
+
+  --error-background-color: #fff5f5;
+  --error-border-color: #e22828;
+}
+
+.autos {
+  --theme-blog-color-60: #eeffe6;
+  --theme-blog-color-70: #c0f2a9;
+  --theme-blog-color-90: #8ce563;
+  --theme-blog-color-100: #4bd60a;
+  --theme-blog-color-110: #5dc80a;
+
+  --theme-blog-secondary-color-60: #f0f6ff;
+  --theme-blog-secondary-color-70: #f0e6ff;
+  --theme-blog-secondary-color-100: #6e0ad6;
+  --theme-blog-secondary-color-110: #5c08b2;
+  --theme-blog-secondary-color-140: #3c4453;
+
+  --theme-blog-subscribe-circle-color: #8ce563;
+
+  --theme-blog-search-empty-icon-color: #1d1d1d;
+
+  --theme-blog-post-intro-title-color: #1a1d23;
+
+  --theme-blog-post-social-media-icon-color: #256b05;
+}
+
+.immobile {
+  --theme-blog-color-60: #fff3e6;
+  --theme-blog-color-70: #ffdb9a;
+  --theme-blog-color-90: #fa8c4d;
+  --theme-blog-color-100: #ff5e00;
+  --theme-blog-color-110: #ff5000;
+
+  --theme-blog-secondary-color-60: #ffece1;
+  --theme-blog-secondary-color-70: #fff3e6;
+  --theme-blog-secondary-color-100: #ff5e00;
+  --theme-blog-secondary-color-110: #ff5000;
+  --theme-blog-secondary-color-140: #7f573f;
+
+  --theme-blog-subscribe-circle-color: #ff5e00;
+
+  --theme-blog-search-empty-icon-color: #fa8c4d;
+
+  --theme-blog-post-intro-title-color: #ff5e00;
+
+  --theme-blog-post-social-media-icon-color: #6b2a05;
 }
