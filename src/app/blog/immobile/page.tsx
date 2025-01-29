@@ -1,8 +1,8 @@
 import { HomeBlogSubscribeToNewseller } from '@/components/blog/molecules/HomeBlog/HomeBlogSubscribeToNewseller'
+import { BlogSubscribe } from '@/components/blog/templates/BlogSubscribe'
 import { HomeBlogArticles } from '@/components/blog/templates/HomeBlog/HomeBlogArticles'
 import { HomeBlogEbooks } from '@/components/blog/templates/HomeBlog/HomeBlogEbooks'
 import { HomeBlogLastNews } from '@/components/blog/templates/HomeBlog/HomeBlogLastNews'
-import { HomeBlogSubscribe } from '@/components/blog/templates/HomeBlog/HomeBlogSubscribe'
 import { twMerge } from 'tailwind-merge'
 
 const homeBloGallery = {
@@ -32,7 +32,7 @@ const BlogImmobilePage = () => {
         <HomeBlogArticles />
         <HomeBlogEbooks />
       </section>
-      <HomeBlogSubscribe />
+      <BlogSubscribe />
 
       <HomeBlogSubscribeToNewseller />
     </main>
