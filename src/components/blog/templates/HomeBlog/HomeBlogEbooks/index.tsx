@@ -1,7 +1,7 @@
 'use client'
 
 import { HomeBlogTitleGroup } from '@/components/blog/molecules/HomeBlog/HomeBlogTitleGroup'
-import { HomeBlogEbookCard } from '@/components/blog/organisms/HomeBlog/HomeBlogEbookCard'
+import { BlogEbookCard } from '@/components/blog/organisms/BlogEbookCard'
 import { LoadingContainer } from '@/components/generic/molecules/LoadingContainer'
 import { Pagination } from '@/components/generic/organisms/Pagination'
 import { twMerge } from 'tailwind-merge'
@@ -28,7 +28,7 @@ const HomeBlogEbooks = (): JSX.Element => {
           )}
         >
           {ebooks.map((ebook, indexEbook) => (
-            <HomeBlogEbookCard
+            <BlogEbookCard
               key={`home-blog-ebook-card-${indexEbook}`}
               {...ebook}
             />

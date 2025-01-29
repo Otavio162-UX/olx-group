@@ -1,6 +1,97 @@
 import type { Config } from 'tailwindcss'
 import { PluginAPI } from 'tailwindcss/types/config'
 
+const postBlogFlowCardEffects = {
+  '.hiddenArrow': {
+    animation: 'hiddenArrowEffect 1s linear 1 forwards',
+    '@keyframes hiddenArrowEffect': {
+      '0%': {
+        visibility: 'visible',
+        opacity: '1',
+      },
+      '100%': {
+        visibility: 'hidden',
+        opacity: '0',
+      },
+    },
+  },
+  '.showArrow': {
+    animation: 'showArrowEffect 1s linear 1 forwards',
+    '@keyframes showArrowEffect': {
+      '0%': {
+        visibility: 'hidden',
+        opacity: '0',
+      },
+      '100%': {
+        visibility: 'visible',
+        opacity: '1',
+      },
+    },
+  },
+  '.animate-close-fixed-card-internal': {
+    animation: 'closeCard 1s linear 1 forwards',
+    '@keyframes closeCard': {
+      '0%': {
+        transform: 'translateY(0)',
+        visibility: 'visible',
+        opacity: '1',
+      },
+      '100%': {
+        transform: 'translateY(160px)',
+        visibility: 'hidden',
+        opacity: '0',
+      },
+    },
+  },
+  '.animate-open-fixed-card-internal': {
+    animation: 'openCard 1s linear 1 forwards',
+    '@keyframes openCard': {
+      '0%': {
+        transform: 'translateY(160px)',
+        visibility: 'hidden',
+        opacity: '0',
+      },
+      '100%': {
+        transform: 'translateY(0)',
+        visibility: 'visible',
+        opacity: '1',
+      },
+    },
+  },
+  '.animate-close-fixed-card-wrapper': {
+    animation: 'closeCardWrapper 1s linear 1 forwards',
+    '@keyframes closeCardWrapper': {
+      '0%': {
+        height: 'auto',
+        borderRadius: '16px',
+      },
+      '100%': {
+        height: '7rem',
+        borderTopLeftRadius: '16px',
+        borderTopRightRadius: '16px',
+        borderBottomLeftRadius: '0px',
+        borderBottomRightRadius: '0px',
+      },
+    },
+  },
+  '.animate-open-fixed-card-wrapper': {
+    animation: 'openWrapper 1s linear 1 forwards',
+    '@keyframes openWrapper': {
+      '0%': {
+        height: '7rem',
+        borderTopLeftRadius: '16px',
+        borderTopRightRadius: '16px',
+        borderBottomLeftRadius: '0px',
+        borderBottomRightRadius: '0px',
+      },
+      '100%': {
+        height: 'auto',
+        borderRadius: '16px',
+      },
+    },
+  },
+}
+
 export default {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -77,17 +168,22 @@ export default {
         'error-background-color': 'var(--error-background-color)',
         'error-border-color': 'var(--error-border-color)',
         'theme-blog': {
+          'color-60': 'var(--theme-blog-color-60)',
           'color-70': 'var(--theme-blog-color-70)',
           'color-90': 'var(--theme-blog-color-90)',
           'color-100': 'var(--theme-blog-color-100)',
           'color-110': 'var(--theme-blog-color-110)',
           'secondary-color-60': 'var(--theme-blog-secondary-color-60)',
+          'secondary-color-70': 'var(--theme-blog-secondary-color-70)',
           'secondary-color-100': 'var(--theme-blog-secondary-color-100)',
           'secondary-color-110': 'var(--theme-blog-secondary-color-110)',
           'secondary-color-140': 'var(--theme-blog-secondary-color-140)',
           'subscribe-circle-color': 'var(--theme-blog-subscribe-circle-color)',
           'search-empty-icon-color':
             'var(--theme-blog-search-empty-icon-color)',
+          'post-intro-title-color': 'var(--theme-blog-post-intro-title-color)',
+          'post-social-media-icon-color':
+            'var(--theme-blog-post-social-media-icon-color)',
         },
       },
       minWidth: {
@@ -119,6 +215,10 @@ export default {
             },
           },
         },
+        '.rotate-y-180': {
+          transform: 'rotateY(180deg)',
+        },
+        ...postBlogFlowCardEffects,
       })
 
       addVariant('nth-last-child-2', '&:nth-last-child(2)')

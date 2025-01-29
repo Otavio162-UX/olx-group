@@ -1,7 +1,7 @@
 'use client'
 
 import { IBlogArticleCard } from '@/components/blog/organisms/BlogArticleCard/BlogArticleCard.interface'
-import { searchBlogResultsContainerButtonsTab } from '@/components/blog/templates/SearchBlog/SearchBlogResultsContainer/arrays/searchBlogResultsContainerButtonsTabs'
+import { searchBlogResultsCategoriesTab } from '@/components/blog/templates/SearchBlog/SearchBlogResultsContainer/arrays/searchBlogResultsCategoriesTab'
 import { useGetBlogType } from '@/hooks/blog/useGetBlogType'
 import { useSearchParams } from 'next/navigation'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
@@ -71,7 +71,7 @@ export const useSearchBlogTab = ({
     console.log(searchParams)
 
     const dataIsEmpty =
-      tabId === searchBlogResultsContainerButtonsTab[0].id &&
+      tabId === searchBlogResultsCategoriesTab[0].id &&
       allArticles[newPage].length === 0
 
     if (dataIsEmpty) {

@@ -7,7 +7,7 @@ import { BreadCrumbs } from '@/components/generic/molecules/BreadCrumbs'
 import { SearchInput } from '@/components/generic/organisms/SearchInput'
 import { Tabination } from '@/components/generic/organisms/Tabination'
 import { twMerge } from 'tailwind-merge'
-import { searchBlogResultsContainerButtonsTab } from './arrays/searchBlogResultsContainerButtonsTabs'
+import { searchBlogResultsCategoriesTab } from './arrays/searchBlogResultsCategoriesTab'
 import { useSearchBlogResultsContainer } from './hooks/useSearchBlogResultsContainer'
 
 const SearchBlogResultsContainer = (): JSX.Element => {
@@ -57,10 +57,10 @@ const SearchBlogResultsContainer = (): JSX.Element => {
             'lg:flex lg:justify-center'
           )}
           variantActive="activeBlog"
-          buttonsTab={searchBlogResultsContainerButtonsTab}
+          buttonsTab={searchBlogResultsCategoriesTab}
           resetStateOnChange={searchParams}
         >
-          {searchBlogResultsContainerButtonsTab.map((item, indexItem) => (
+          {searchBlogResultsCategoriesTab.map((item, indexItem) => (
             <SearchBlogTab
               key={`search-tab-${indexItem}`}
               tabId={item.id}

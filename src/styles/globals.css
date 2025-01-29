@@ -64,12 +64,14 @@
 }
 
 .autos {
+  --theme-blog-color-60: #eeffe6;
   --theme-blog-color-70: #c0f2a9;
   --theme-blog-color-90: #8ce563;
   --theme-blog-color-100: #4bd60a;
   --theme-blog-color-110: #5dc80a;
 
   --theme-blog-secondary-color-60: #f0f6ff;
+  --theme-blog-secondary-color-70: #f0e6ff;
   --theme-blog-secondary-color-100: #6e0ad6;
   --theme-blog-secondary-color-110: #5c08b2;
   --theme-blog-secondary-color-140: #3c4453;
@@ -77,15 +79,21 @@
   --theme-blog-subscribe-circle-color: #8ce563;
 
   --theme-blog-search-empty-icon-color: #1d1d1d;
+
+  --theme-blog-post-intro-title-color: #1a1d23;
+
+  --theme-blog-post-social-media-icon-color: #256b05;
 }
 
 .immobile {
+  --theme-blog-color-60: #fff3e6;
   --theme-blog-color-70: #ffdb9a;
   --theme-blog-color-90: #fa8c4d;
   --theme-blog-color-100: #ff5e00;
   --theme-blog-color-110: #ff5000;
 
   --theme-blog-secondary-color-60: #ffece1;
+  --theme-blog-secondary-color-70: #fff3e6;
   --theme-blog-secondary-color-100: #ff5e00;
   --theme-blog-secondary-color-110: #ff5000;
   --theme-blog-secondary-color-140: #7f573f;
@@ -93,4 +101,8 @@
   --theme-blog-subscribe-circle-color: #ff5e00;
 
   --theme-blog-search-empty-icon-color: #fa8c4d;
+
+  --theme-blog-post-intro-title-color: #ff5e00;
+
+  --theme-blog-post-social-media-icon-color: #6b2a05;
 }

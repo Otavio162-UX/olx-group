@@ -21,3 +21,7 @@ export interface ICanScrollState {
 }
 
 export type TBlogVariants = 'immobile' | 'autos'
+
+export interface IPostIdPageParams {
+  params: Promise<{ postId: string }>
+}

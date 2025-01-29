@@ -28,6 +28,10 @@ export const InternalRoutes = {
     `/blog/${blogType}/moreRead`,
   BLOG_SEARCH: (blogType: TBlogVariants, search?: string): string =>
     `/blog/${blogType}/search${search ? `?${search}` : ''}`,
+  BLOG_RICH_MATERIALS_E_BOOK: (
+    blogType: TBlogVariants,
+    ebookId: string
+  ): string => `/blog/${blogType}/richMaterials/${ebookId}`,
 
   // privacy policy
   PRIVACY_POLICY: '/privacy-policy',

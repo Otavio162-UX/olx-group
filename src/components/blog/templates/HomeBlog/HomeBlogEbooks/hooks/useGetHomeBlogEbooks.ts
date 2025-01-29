@@ -1,29 +1,27 @@
 'use client'
 
-import { IHomeBlogEbookCard } from '@/components/blog/organisms/HomeBlog/HomeBlogEbookCard/HomeBlogEbookCard.interface'
+import { IBlogEbookCard } from '@/components/blog/organisms/BlogEbookCard/BlogEbookCard.interface'
 import { useGetBlogType } from '@/hooks/blog/useGetBlogType'
 import { useState } from 'react'
 
-const ebookA: IHomeBlogEbookCard = {
+const ebookA: IBlogEbookCard = {
   title:
     'Data OLX Autos traz perspectivas do setor automotivo no encerramento do ano',
   buttonTitle: 'Imóveis',
   description: 'Descrição resumida do e-book',
-  link: 'https://www.google.com',
   ebookId: 'ebook-1',
 }
 
-const ebookB: IHomeBlogEbookCard = {
+const ebookB: IBlogEbookCard = {
   title:
     'Data OLX Autos traz perspectivas do setor automotivo no encerramento do ano',
   buttonTitle: 'Gestão e relacionamento',
   description:
     'Descrição resumida do e-book irá aqui para mostrar algumas linhas',
-  link: 'https://www.google.com',
   ebookId: 'ebook-2',
 }
 
-const allEbooks: Record<number, IHomeBlogEbookCard[]> = {
+const allEbooks: Record<number, IBlogEbookCard[]> = {
   0: [...Array(4)].map(() => ebookA),
   1: [...Array(4)].map(() => ebookB),
 }
@@ -33,7 +31,7 @@ interface IReturnUseGetHomeBlogEbooks {
   totalPages: number
   loading: boolean
   changePage: (newPage: number) => void
-  ebooks: IHomeBlogEbookCard[]
+  ebooks: IBlogEbookCard[]
 }
 
 export const useGetHomeBlogEbooks = (): IReturnUseGetHomeBlogEbooks => {

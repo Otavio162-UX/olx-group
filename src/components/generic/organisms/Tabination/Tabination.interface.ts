@@ -1,8 +1,6 @@
-import { ReactNode } from 'react'
-
 export interface IButtonTabProps {
   id: string
-  children: ReactNode
+  children: string
 }
 
 export interface ITabination {
