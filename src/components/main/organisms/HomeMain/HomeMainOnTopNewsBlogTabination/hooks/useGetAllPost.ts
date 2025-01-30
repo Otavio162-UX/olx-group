@@ -1,3 +1,5 @@
+'use client'
+
 import { IHomeMainNewsCard } from '@/components/main/organisms/HomeMain/HomeMainNewsCard/HomeMainNewsCard.interface'
 
 const all: IHomeMainNewsCard[] = [
@@ -11,8 +13,8 @@ const all: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'immobile',
-    id: 'titulo-1',
+    blogType: 'immobile',
+    newsId: 'titulo-1',
   },
   {
     imageSrc:
@@ -23,8 +25,8 @@ const all: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'autos',
-    id: 'titulo-2',
+    blogType: 'autos',
+    newsId: 'titulo-2',
   },
   {
     imageSrc:
@@ -35,8 +37,8 @@ const all: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'immobile',
-    id: 'titulo-3',
+    blogType: 'immobile',
+    newsId: 'titulo-3',
   },
   {
     imageSrc:
@@ -47,8 +49,8 @@ const all: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'autos',
-    id: 'titulo-4',
+    blogType: 'autos',
+    newsId: 'titulo-4',
   },
   {
     imageSrc:
@@ -59,8 +61,8 @@ const all: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'immobile',
-    id: 'titulo-5',
+    blogType: 'immobile',
+    newsId: 'titulo-5',
   },
   {
     imageSrc:
@@ -72,8 +74,8 @@ const all: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'immobile',
-    id: 'titulo-6',
+    blogType: 'immobile',
+    newsId: 'titulo-6',
   },
   {
     imageSrc:
@@ -84,8 +86,8 @@ const all: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'autos',
-    id: 'titulo-7',
+    blogType: 'autos',
+    newsId: 'titulo-7',
   },
 ]
 
@@ -99,8 +101,8 @@ const immobile: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'immobile',
-    id: 'titulo-8',
+    blogType: 'immobile',
+    newsId: 'titulo-8',
   },
   {
     imageSrc:
@@ -112,8 +114,8 @@ const immobile: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'immobile',
-    id: 'titulo-9',
+    blogType: 'immobile',
+    newsId: 'titulo-9',
   },
   {
     imageSrc:
@@ -124,8 +126,8 @@ const immobile: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'autos',
-    id: 'titulo-10',
+    blogType: 'autos',
+    newsId: 'titulo-10',
   },
 ]
 
@@ -139,8 +141,8 @@ const autos: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'autos',
-    id: 'titulo-11',
+    blogType: 'autos',
+    newsId: 'titulo-11',
   },
   {
     imageSrc:
@@ -151,8 +153,8 @@ const autos: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'immobile',
-    id: 'titulo-12',
+    blogType: 'immobile',
+    newsId: 'titulo-12',
   },
   {
     imageSrc:
@@ -164,8 +166,8 @@ const autos: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'immobile',
-    id: 'titulo-13',
+    blogType: 'immobile',
+    newsId: 'titulo-13',
   },
   {
     imageSrc:
@@ -176,13 +178,17 @@ const autos: IHomeMainNewsCard[] = [
     timeOlx: 'Time OLX',
     date: '11 Jan 2022',
     readTime: 'Leitura de 5 min',
-    variant: 'autos',
-    id: 'titulo-14',
+    blogType: 'autos',
+    newsId: 'titulo-14',
   },
 ]
 
-export const homeMainOnTopNewsBlogTabination: IHomeMainNewsCard[][] = [
+const homeMainOnTopNewsBlogTabination: IHomeMainNewsCard[][] = [
   all,
   immobile,
   autos,
 ]
+
+export const useGetAllPost = () => {
+  return homeMainOnTopNewsBlogTabination
+}

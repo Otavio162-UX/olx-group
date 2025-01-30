@@ -24,7 +24,7 @@ export const useBlogReceiveOurNewsProps =
       try {
         blogReceiveOurNewsSchema.parse({ email })
         setLoading(true)
-        console.log('E-mail válido:', email)
+        console.log('E-mail válido:', email.trim())
 
         setError(null)
         setTimeout(() => setLoading(false), 1000)

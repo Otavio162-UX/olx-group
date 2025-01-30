@@ -83,6 +83,10 @@
   --theme-blog-post-intro-title-color: #1a1d23;
 
   --theme-blog-post-social-media-icon-color: #256b05;
+
+  --theme-blog-presentation-button-background: #f0e6ff;
+  --theme-blog-presentation-button-color: #123800;
+  --theme-blog-presentation-shape: #8ce563;
 }
 
 .immobile {
@@ -105,4 +109,8 @@
   --theme-blog-post-intro-title-color: #ff5e00;
 
   --theme-blog-post-social-media-icon-color: #6b2a05;
+
+  --theme-blog-presentation-button-background: #ff5e00;
+  --theme-blog-presentation-button-color: #fff;
+  --theme-blog-presentation-shape: #fff;
 }

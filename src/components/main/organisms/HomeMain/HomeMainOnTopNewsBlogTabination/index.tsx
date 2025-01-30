@@ -13,7 +13,7 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { SwiperSlide } from 'swiper/react'
 import { twMerge } from 'tailwind-merge'
-import { homeMainOnTopNewsBlogTabination } from './arrays/homeMainOnTopNewsBlogTabination'
+import { useGetAllPost } from './hooks/useGetAllPost'
 
 const Swiper = dynamic(async () => (await import('swiper/react')).Swiper, {
   ssr: false,
@@ -21,6 +21,8 @@ const Swiper = dynamic(async () => (await import('swiper/react')).Swiper, {
 })
 
 const HomeMainOnTopNewsBlogTabination = (): JSX.Element => {
+  const allPost = useGetAllPost()
+
   return (
     <div className="flex flex-col gap-4 mb-4">
       <Tabination
@@ -36,16 +38,16 @@ const HomeMainOnTopNewsBlogTabination = (): JSX.Element => {
         }
         buttonsTab={homeMainOnTopNewsButtonsTab}
       >
-        {homeMainOnTopNewsBlogTabination.map((slide, indexSlide) => (
+        {allPost.map((post, indexPost) => (
           <Swiper
-            key={`home-on-top-news-blog-tabination-${indexSlide}`}
+            key={`home-on-top-news-blog-tabination-${indexPost}`}
             slidesPerView={'auto'}
             spaceBetween={32}
             className="mt-4 cursor-grab active:cursor-grabbing"
           >
-            {slide.map((card, indexCard) => (
+            {post.map((card, indexCard) => (
               <SwiperSlide
-                key={`slide-home-on-news-blog-${indexSlide}-${indexCard}`}
+                key={`slide-home-on-news-blog-${indexPost}-${indexCard}`}
                 className="max-w-[308px]"
               >
                 <HomeMainNewsCard {...card} />
