@@ -184,6 +184,11 @@ export default {
           'post-intro-title-color': 'var(--theme-blog-post-intro-title-color)',
           'post-social-media-icon-color':
             'var(--theme-blog-post-social-media-icon-color)',
+          'presentation-button-background':
+            'var(--theme-blog-presentation-button-background)',
+          'presentation-button-color':
+            'var(--theme-blog-presentation-button-color)',
+          'presentation-shape': 'var(--theme-blog-presentation-shape)',
         },
       },
       minWidth: {
