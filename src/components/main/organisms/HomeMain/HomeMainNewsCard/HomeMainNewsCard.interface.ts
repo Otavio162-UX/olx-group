@@ -2,12 +2,12 @@ import { TBlogVariants } from '@/types/global'
 
 export interface IHomeMainNewsCard {
   imageSrc: string
-  variant: TBlogVariants
+  blogType: TBlogVariants
   buttonTitle: string
   newsTitle: string
   newsDescription: string
   timeOlx: string
   date: string
   readTime: string
-  id: string | number
+  newsId: string | number
 }

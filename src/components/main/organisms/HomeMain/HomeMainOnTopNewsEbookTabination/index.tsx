@@ -13,7 +13,7 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { SwiperSlide } from 'swiper/react'
 import { twMerge } from 'tailwind-merge'
-import { homeMainOnTopNewsEbookTabination } from './arrays/homeMainOnTopNewsEbookTabination'
+import { useGetAllEbooks } from './hooks/useGetAllEbooks'
 
 const Swiper = dynamic(async () => (await import('swiper/react')).Swiper, {
   ssr: false,
@@ -21,6 +21,8 @@ const Swiper = dynamic(async () => (await import('swiper/react')).Swiper, {
 })
 
 const HomeMainOnTopNewsEbookTabination = (): JSX.Element => {
+  const allEbooks = useGetAllEbooks()
+
   return (
     <div className="flex flex-col gap-4 mb-4">
       <Tabination
@@ -36,16 +38,16 @@ const HomeMainOnTopNewsEbookTabination = (): JSX.Element => {
         }
         buttonsTab={homeMainOnTopNewsButtonsTab}
       >
-        {homeMainOnTopNewsEbookTabination.map((slide, indexSlide) => (
+        {allEbooks.map((ebook, indexEbook) => (
           <Swiper
-            key={`home-on-top-news-blog-tabination-${indexSlide}`}
+            key={`home-on-top-news-blog-tabination-${indexEbook}`}
             slidesPerView={'auto'}
             spaceBetween={24}
             className="mt-4 cursor-grab active:cursor-grabbing"
           >
-            {slide.map((card, indexCard) => (
+            {ebook.map((card, indexCard) => (
               <SwiperSlide
-                key={`slide-home-on-news-ebook-${indexSlide}-${indexCard}`}
+                key={`slide-home-on-news-ebook-${indexEbook}-${indexCard}`}
                 className="max-w-[19.625rem] py-4"
               >
                 <HomeMainEbookCard {...card} />

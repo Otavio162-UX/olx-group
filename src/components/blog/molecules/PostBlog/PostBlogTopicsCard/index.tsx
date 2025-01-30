@@ -1,7 +1,9 @@
 import { PostBlogIntroTitle } from '@/components/blog/atoms/PostBlog/PostBlogIntroTitle'
+import { Button } from '@/components/generic/atoms/Button'
 import { Text } from '@/components/generic/atoms/Text'
 import { twMerge } from 'tailwind-merge'
 import { IPostBlogTopicsCard } from './PostBlogTopicsCard.interface'
+import { goToIndexPost } from './functions/goToIndexPost'
 
 const PostBlogTopicsCard = ({
   title,
@@ -31,16 +33,17 @@ const PostBlogTopicsCard = ({
         </Text>
 
         {topics.map((topic, indexTopic) => (
-          <Text
-            tag="p"
+          <Button
             key={`card-with-topic-${indexTopic}`}
+            variant="clean"
             className={twMerge(
-              'text-base font-bold text-neutral-130',
+              'text-base font-bold text-neutral-130 px-0 py-0 flex max-w-max justify-start rounded-none',
               'lg:text-lg'
             )}
+            onClick={() => goToIndexPost({ indexTopic })}
           >
             {topic.text}
-          </Text>
+          </Button>
         ))}
       </div>
     </div>

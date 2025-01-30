@@ -4,13 +4,14 @@ import { PostBlogOtherArticlesTitles } from '@/components/blog/molecules/PostBlo
 import { BlogArticleCard } from '@/components/blog/organisms/BlogArticleCard'
 import { BlogEbookCard } from '@/components/blog/organisms/BlogEbookCard'
 import { useGetBlogType } from '@/hooks/blog/useGetBlogType'
+import { generateArticleId } from '@/utils/PostBlog'
 import { Fragment } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { IPostBlogIntro } from './PostBlogIntro.interface'
 import { postBlogInfoProps } from './variables/postBlogInfoProps'
 
 const PostBlogIntro = ({
-  articleDetails,
+  articleDetails: [intro, topics, ...articles],
   otherArticles,
   otherEbooks,
 }: IPostBlogIntro): JSX.Element => {
@@ -27,10 +28,24 @@ const PostBlogIntro = ({
       )}
     >
       <article className={twMerge('flex flex-col gap-6 max-w-[52rem]')}>
-        {articleDetails.map((article, indexArticle) => (
+        {[intro, topics].map((article, indexArticle) => (
           <div
             className="flex flex-col gap-4"
             key={`article-post-${indexArticle}`}
+          >
+            {article.map((item, indexItem) => (
+              <Fragment key={`article-item-${indexArticle}-${indexItem}`}>
+                {articlesComponents[item.type](item)}
+              </Fragment>
+            ))}
+          </div>
+        ))}
+
+        {articles.map((article, indexArticle) => (
+          <div
+            className="flex flex-col gap-4"
+            key={`article-post-${indexArticle}`}
+            id={generateArticleId({ indexTopic: indexArticle })}
           >
             {article.map((item, indexItem) => (
               <Fragment key={`article-item-${indexArticle}-${indexItem}`}>
